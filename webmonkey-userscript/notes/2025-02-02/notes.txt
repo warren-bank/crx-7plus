@@ -1,0 +1,2216 @@
+--------------------------------------------------------------------------------
+
+https://7plus.com.au/
+https://7plus.com.au/shows
+
+--------------------------------------------------------------------------------
+
+test videos (entire series):
+============================
+
+https://7plus.com.au/gilmore-girls
+
+view-source:https://7plus.com.au/gilmore-girls
+  "brightcoveScript":"https://players.brightcove.net/5303576322001/5J5AQeoHF_default/index.min.js"
+  "account_id":"5303576322001"
+
+https://players.brightcove.net/5303576322001/5J5AQeoHF_default/index.min.js
+  accountId:"5303576322001",policyKey:"BCpkADawqM33sxTxTSkUGuTlYrSr1IWKvoedldJ6w01PbfYMPMDR2OSumoyEdKusPv2UC6g_bidqbcAkLzVwSOgD1Yea5O3V0Wu35n2lWGq1FmNDHB4dhwcTqJ7Z3GNoI-mfkmi6xMpLPBAN"
+
+--------------------------------------------------------------------------------
+
+https://component-cdn.swm.digital/content/gilmore-girls?platform-id=web&market-id=-1&platform-version=1.0.100878&api-version=4.9
+{
+  "title": "Gilmore Girls",
+  "pageMetaData": {
+    "canonicalUrl": "/gilmore-girls",
+    "description": "Watch, Stream & Catch Up with your favourite Gilmore Girls episodes on 7plus. In Stars Hollow, Connecticut, Lorelai Gilmore and her teenage daughter, Rory, navigate life, love, and the echoes of Lorelai's rebellious youth.",
+    "pageTitle": "Watch Gilmore Girls Online: Free Streaming & Catch Up TV in Australia",
+    "pageEventName": "vodPage",
+    "siteName": "7plus",
+    "objectGraphImage": {
+      "altTag": "Gilmore Girls",
+      "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107349/gilg_16_9-show_movie-card.jpg",
+      "type": "image",
+      "id": "579061",
+      "cName": "gilg-16-9-show-movie-card"
+    },
+    "metaTags": [{
+      "name": "description",
+      "property": null,
+      "content": "Watch, Stream & Catch Up with your favourite Gilmore Girls episodes on 7plus. In Stars Hollow, Connecticut, Lorelai Gilmore and her teenage daughter, Rory, navigate life, love, and the echoes of Lorelai's rebellious youth."
+    }, {
+      "name": null,
+      "property": "og:description",
+      "content": "Watch, Stream & Catch Up with your favourite Gilmore Girls episodes on 7plus. In Stars Hollow, Connecticut, Lorelai Gilmore and her teenage daughter, Rory, navigate life, love, and the echoes of Lorelai's rebellious youth."
+    }, {
+      "name": null,
+      "property": "og:title",
+      "content": "Watch Gilmore Girls Online: Free Streaming & Catch Up TV in Australia"
+    }, {
+      "name": null,
+      "property": "og:image",
+      "content": "https://imageproxy.swm.digital/image?u=https%3A%2F%2Fproduction-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com%2Fmedia%2F107349%2Fgilg_16_9-show_movie-card.jpg&format=jpeg&w=1200&q=80"
+    }, {
+      "name": null,
+      "property": "og:site",
+      "content": "7plus"
+    }],
+    "urls": {
+      "android": "seven://series/GILG",
+      "ios": "seven://series/GILG",
+      "web": "https://7plus.com.au/link/series/GILG"
+    },
+    "seriesBroadcastRef": "GILG"
+  },
+  "items": [{
+    "backgroundImage": {
+      "altTag": "Gilmore Girls",
+      "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107348/gilg_16_9-background-image.jpg",
+      "type": "image",
+      "id": "579060",
+      "cName": "gilg-16-9-background-image"
+    },
+    "seriesBackgroundImage_9x16": {
+      "altTag": "Gilmore Girls",
+      "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107347/gilg_9_16-background-image.jpg",
+      "type": "image",
+      "id": "579059",
+      "cName": "gilg-9-16-background-image"
+    },
+    "backgroundVideoUrl": null,
+    "logo": {
+      "altTag": "Gilmore Girls",
+      "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107351/gilg_show-logo.png",
+      "type": "image",
+      "id": "579063",
+      "cName": "gilg-show-logo"
+    },
+    "title": "Gilmore Girls",
+    "buttonPanel": {
+      "items": [{
+        "videoUrl": "https://videoservice.swm.digital/playback?appId=7plus&deviceType=web&platformType=web&ppId={ppId}&deviceId=[deviceId]&pc=[postcode]&advertid=[advertid]&accountId=5303576322001&referenceId=ref:GILG01-001&deliveryId={deliveryId}&videoType=vod&showId=GILG",
+        "type": "playerButton"
+      }, {
+        "source": {
+          "url": "https://watchlist.swm.digital/?broadcasterRef=GILG&platform-id=Web&market-id=4&api-version=4.9.0.0",
+          "authorise": false,
+          "validFor": null
+        },
+        "theme": "watchlistButton",
+        "type": "button",
+        "cName": "Watchlist Button"
+      }],
+      "type": "buttonPanel"
+    },
+    "subtitle": "S1 E1 - Pilot",
+    "shortSynopsis": "When Rory gets accepted to a fancy prep school, Lorelai is forced to humble herself and ask her mother for help in paying the tuition.",
+    "isClosedCaption": true,
+    "airDate": null,
+    "expiresOn": null,
+    "productionYear": "2000",
+    "duration": "42m",
+    "classification": "PG",
+    "startAt": 0,
+    "restricted": true,
+    "genres": ["Drama"],
+    "playerId": "GILG01-001",
+    "image": {
+      "altTag": "Gilmore Girls Season 1 Episode 1",
+      "url": "https://imagemap.swm.digital/image/GILG01-001",
+      "type": "image"
+    },
+    "analytics": {
+      "seriesTitle": "Gilmore Girls"
+    },
+    "type": "featuredShowHeader",
+    "id": "287014",
+    "cName": "VOD Featured header"
+  }, {
+    "title": "On Now",
+    "source": {
+      "url": "https://component.swm.digital/component/gilmore-girls?component-id=306346&platform-id=Web&market-id=4&platform-version=1.0.100878.0&api-version=4.9.0.0&signedUp=False",
+      "authorise": false,
+      "validFor": 60
+    },
+    "type": "smartShelf",
+    "id": "306346"
+  }, {
+    "title": null,
+    "visible": false,
+    "theme": null,
+    "items": [{
+      "title": "Episodes",
+      "link": null,
+      "items": [{
+        "title": "Season",
+        "visible": true,
+        "theme": "redTab",
+        "items": [{
+          "title": "1",
+          "link": null,
+          "items": [{
+            "title": null,
+            "description": "Season",
+            "layout": "Grid Layout",
+            "mediaItems": [{
+              "infoPanelData": {
+                "title": "Gilmore Girls",
+                "lozengeText": "",
+                "subtitle": "S1 E1 - Pilot",
+                "shortSynopsis": "When Rory gets accepted to a fancy prep school, Lorelai is forced to humble herself and ask her mother for help in paying the tuition.",
+                "genre": ["DRAMA"],
+                "classification": "PG",
+                "isClosedCaption": true,
+                "airDate": null,
+                "expiresOn": null,
+                "duration": null,
+                "seriesLogo": {
+                  "name": "Gilmore Girls",
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107345/gilg_1_1-shelf-image.jpg",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "buttonPanel": null,
+                "type": "EpisodeInfoPanel"
+              },
+              "playerData": {
+                "title": "S1 E1 - Pilot",
+                "videoMetadata": null,
+                "videoUrl": "https://videoservice.swm.digital/playback?appId=7plus&deviceType=web&platformType=web&ppId={ppId}&deviceId=[deviceId]&pc=[postcode]&advertid=[advertid]&accountId=5303576322001&referenceId=ref:GILG01-001&deliveryId={deliveryId}&videoType=vod&showId=GILG",
+                "videoType": "vod",
+                "episodePlayerId": "GILG01-001",
+                "image": {
+                  "name": "Gilmore Girls - S1 E1 - Pilot",
+                  "altTag": "Gilmore Girls Season 1 Episode 1",
+                  "url": "https://imagemap.swm.digital/image/GILG01-001",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "analytics": {
+                  "seriesTitle": "Gilmore Girls"
+                },
+                "dialogBox": {
+                  "text": "This show is available with a profile",
+                  "buttonText": "Continue",
+                  "contentLink": {
+                    "url": "/{path}?overlay=sign-in",
+                    "type": "navigationItem"
+                  }
+                },
+                "restricted": true,
+                "type": "EpisodePlayer"
+              },
+              "cardData": {
+                "title": "1. Pilot",
+                "subtitle": null,
+                "synopsis": "When Rory gets accepted to a fancy prep school, Lorelai is forced to humble herself and ask her mother for help in paying the tuition.",
+                "lozengeText": null,
+                "image": {
+                  "name": "Gilmore Girls - 1. Pilot",
+                  "altTag": "Gilmore Girls Season 1 Episode 1",
+                  "url": "https://imagemap.swm.digital/image/GILG01-001",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "contentLink": {
+                  "url": "/gilmore-girls?episode-id=GILG01-001&autoplay=true",
+                  "type": "navigationItem"
+                },
+                "expiresOn": null,
+                "duration": "42m",
+                "seriesBackgroundImage": {
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107348/gilg_16_9-background-image.jpg",
+                  "type": "image",
+                  "id": "579060",
+                  "cName": "gilg-16-9-background-image"
+                },
+                "seriesLogo": {
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107351/gilg_show-logo.png",
+                  "type": "image",
+                  "id": "579063",
+                  "cName": "gilg-show-logo"
+                },
+                "productionYear": "2000",
+                "type": "EpisodeCard"
+              },
+              "active": true,
+              "catalogueNumber": "GILG01-001",
+              "type": "EpisodeContainer"
+            }, {
+              "infoPanelData": {
+                "title": "Gilmore Girls",
+                "lozengeText": "",
+                "subtitle": "S1 E2 - The Lorelais' First Day At Chilton",
+                "shortSynopsis": "A T-shirt, shorts and cowboy boots-clad Lorelai accompanies Rory on her first day at school, drawing disapproving stares from the other mothers and from Lorelai's own mother, Emily.",
+                "genre": ["DRAMA"],
+                "classification": "PG",
+                "isClosedCaption": true,
+                "airDate": null,
+                "expiresOn": null,
+                "duration": null,
+                "seriesLogo": {
+                  "name": "Gilmore Girls",
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107345/gilg_1_1-shelf-image.jpg",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "buttonPanel": null,
+                "type": "EpisodeInfoPanel"
+              },
+              "playerData": {
+                "title": "S1 E2 - The Lorelais' First Day At Chilton",
+                "videoMetadata": null,
+                "videoUrl": "https://videoservice.swm.digital/playback?appId=7plus&deviceType=web&platformType=web&ppId={ppId}&deviceId=[deviceId]&pc=[postcode]&advertid=[advertid]&accountId=5303576322001&referenceId=ref:GILG01-002&deliveryId={deliveryId}&videoType=vod&showId=GILG",
+                "videoType": "vod",
+                "episodePlayerId": "GILG01-002",
+                "image": {
+                  "name": "Gilmore Girls - S1 E2 - The Lorelais' First Day At Chilton",
+                  "altTag": "Gilmore Girls Season 1 Episode 2",
+                  "url": "https://imagemap.swm.digital/image/GILG01-002",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "analytics": {
+                  "seriesTitle": "Gilmore Girls"
+                },
+                "dialogBox": {
+                  "text": "This show is available with a profile",
+                  "buttonText": "Continue",
+                  "contentLink": {
+                    "url": "/{path}?overlay=sign-in",
+                    "type": "navigationItem"
+                  }
+                },
+                "restricted": true,
+                "type": "EpisodePlayer"
+              },
+              "cardData": {
+                "title": "2. The Lorelais' First Day At Chilton",
+                "subtitle": null,
+                "synopsis": "A T-shirt, shorts and cowboy boots-clad Lorelai accompanies Rory on her first day at school, drawing disapproving stares from the other mothers and from Lorelai's own mother, Emily.",
+                "lozengeText": null,
+                "image": {
+                  "name": "Gilmore Girls - 2. The Lorelais' First Day At Chilton",
+                  "altTag": "Gilmore Girls Season 1 Episode 2",
+                  "url": "https://imagemap.swm.digital/image/GILG01-002",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "contentLink": {
+                  "url": "/gilmore-girls?episode-id=GILG01-002&autoplay=true",
+                  "type": "navigationItem"
+                },
+                "expiresOn": null,
+                "duration": "42m",
+                "seriesBackgroundImage": {
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107348/gilg_16_9-background-image.jpg",
+                  "type": "image",
+                  "id": "579060",
+                  "cName": "gilg-16-9-background-image"
+                },
+                "seriesLogo": {
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107351/gilg_show-logo.png",
+                  "type": "image",
+                  "id": "579063",
+                  "cName": "gilg-show-logo"
+                },
+                "productionYear": "2000",
+                "type": "EpisodeCard"
+              },
+              "active": false,
+              "catalogueNumber": "GILG01-002",
+              "type": "EpisodeContainer"
+            }, {
+              "infoPanelData": {
+                "title": "Gilmore Girls",
+                "lozengeText": "",
+                "subtitle": "S1 E3 - Kill Me Now",
+                "shortSynopsis": "When Richard and Rory form an instant bond during a wonderful day of golf, Lorelai feels left out and finds it difficult to observe Rory's emotional connection with Emily and Richard.",
+                "genre": ["DRAMA"],
+                "classification": "PG",
+                "isClosedCaption": true,
+                "airDate": null,
+                "expiresOn": null,
+                "duration": null,
+                "seriesLogo": {
+                  "name": "Gilmore Girls",
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107345/gilg_1_1-shelf-image.jpg",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "buttonPanel": null,
+                "type": "EpisodeInfoPanel"
+              },
+              "playerData": {
+                "title": "S1 E3 - Kill Me Now",
+                "videoMetadata": null,
+                "videoUrl": "https://videoservice.swm.digital/playback?appId=7plus&deviceType=web&platformType=web&ppId={ppId}&deviceId=[deviceId]&pc=[postcode]&advertid=[advertid]&accountId=5303576322001&referenceId=ref:GILG01-003&deliveryId={deliveryId}&videoType=vod&showId=GILG",
+                "videoType": "vod",
+                "episodePlayerId": "GILG01-003",
+                "image": {
+                  "name": "Gilmore Girls - S1 E3 - Kill Me Now",
+                  "altTag": "Gilmore Girls Season 1 Episode 3",
+                  "url": "https://imagemap.swm.digital/image/GILG01-003",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "analytics": {
+                  "seriesTitle": "Gilmore Girls"
+                },
+                "dialogBox": {
+                  "text": "This show is available with a profile",
+                  "buttonText": "Continue",
+                  "contentLink": {
+                    "url": "/{path}?overlay=sign-in",
+                    "type": "navigationItem"
+                  }
+                },
+                "restricted": true,
+                "type": "EpisodePlayer"
+              },
+              "cardData": {
+                "title": "3. Kill Me Now",
+                "subtitle": null,
+                "synopsis": "When Richard and Rory form an instant bond during a wonderful day of golf, Lorelai feels left out and finds it difficult to observe Rory's emotional connection with Emily and Richard.",
+                "lozengeText": null,
+                "image": {
+                  "name": "Gilmore Girls - 3. Kill Me Now",
+                  "altTag": "Gilmore Girls Season 1 Episode 3",
+                  "url": "https://imagemap.swm.digital/image/GILG01-003",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "contentLink": {
+                  "url": "/gilmore-girls?episode-id=GILG01-003&autoplay=true",
+                  "type": "navigationItem"
+                },
+                "expiresOn": null,
+                "duration": "41m",
+                "seriesBackgroundImage": {
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107348/gilg_16_9-background-image.jpg",
+                  "type": "image",
+                  "id": "579060",
+                  "cName": "gilg-16-9-background-image"
+                },
+                "seriesLogo": {
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107351/gilg_show-logo.png",
+                  "type": "image",
+                  "id": "579063",
+                  "cName": "gilg-show-logo"
+                },
+                "productionYear": "2000",
+                "type": "EpisodeCard"
+              },
+              "active": false,
+              "catalogueNumber": "GILG01-003",
+              "type": "EpisodeContainer"
+            }, {
+              "infoPanelData": {
+                "title": "Gilmore Girls",
+                "lozengeText": "",
+                "subtitle": "S1 E4 - The Deer-Hunters",
+                "shortSynopsis": "Rory has trouble getting good grades at her new school. Lorelai becomes interested in Rory's handsome teacher.",
+                "genre": ["DRAMA"],
+                "classification": "PG",
+                "isClosedCaption": true,
+                "airDate": null,
+                "expiresOn": null,
+                "duration": null,
+                "seriesLogo": {
+                  "name": "Gilmore Girls",
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107345/gilg_1_1-shelf-image.jpg",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "buttonPanel": null,
+                "type": "EpisodeInfoPanel"
+              },
+              "playerData": {
+                "title": "S1 E4 - The Deer-Hunters",
+                "videoMetadata": null,
+                "videoUrl": "https://videoservice.swm.digital/playback?appId=7plus&deviceType=web&platformType=web&ppId={ppId}&deviceId=[deviceId]&pc=[postcode]&advertid=[advertid]&accountId=5303576322001&referenceId=ref:GILG01-004&deliveryId={deliveryId}&videoType=vod&showId=GILG",
+                "videoType": "vod",
+                "episodePlayerId": "GILG01-004",
+                "image": {
+                  "name": "Gilmore Girls - S1 E4 - The Deer-Hunters",
+                  "altTag": "Gilmore Girls Season 1 Episode 4",
+                  "url": "https://imagemap.swm.digital/image/GILG01-004",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "analytics": {
+                  "seriesTitle": "Gilmore Girls"
+                },
+                "dialogBox": {
+                  "text": "This show is available with a profile",
+                  "buttonText": "Continue",
+                  "contentLink": {
+                    "url": "/{path}?overlay=sign-in",
+                    "type": "navigationItem"
+                  }
+                },
+                "restricted": true,
+                "type": "EpisodePlayer"
+              },
+              "cardData": {
+                "title": "4. The Deer-Hunters",
+                "subtitle": null,
+                "synopsis": "Rory has trouble getting good grades at her new school. Lorelai becomes interested in Rory's handsome teacher.",
+                "lozengeText": null,
+                "image": {
+                  "name": "Gilmore Girls - 4. The Deer-Hunters",
+                  "altTag": "Gilmore Girls Season 1 Episode 4",
+                  "url": "https://imagemap.swm.digital/image/GILG01-004",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "contentLink": {
+                  "url": "/gilmore-girls?episode-id=GILG01-004&autoplay=true",
+                  "type": "navigationItem"
+                },
+                "expiresOn": null,
+                "duration": "42m",
+                "seriesBackgroundImage": {
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107348/gilg_16_9-background-image.jpg",
+                  "type": "image",
+                  "id": "579060",
+                  "cName": "gilg-16-9-background-image"
+                },
+                "seriesLogo": {
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107351/gilg_show-logo.png",
+                  "type": "image",
+                  "id": "579063",
+                  "cName": "gilg-show-logo"
+                },
+                "productionYear": "2000",
+                "type": "EpisodeCard"
+              },
+              "active": false,
+              "catalogueNumber": "GILG01-004",
+              "type": "EpisodeContainer"
+            }, {
+              "infoPanelData": {
+                "title": "Gilmore Girls",
+                "lozengeText": "",
+                "subtitle": "S1 E5 - Cinnamon's Wake",
+                "shortSynopsis": "Lorelai forgets to tell Rory that she has a date with Rory's teacher Max. Rory has a new crush.",
+                "genre": ["DRAMA"],
+                "classification": "PG",
+                "isClosedCaption": true,
+                "airDate": null,
+                "expiresOn": null,
+                "duration": null,
+                "seriesLogo": {
+                  "name": "Gilmore Girls",
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107345/gilg_1_1-shelf-image.jpg",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "buttonPanel": null,
+                "type": "EpisodeInfoPanel"
+              },
+              "playerData": {
+                "title": "S1 E5 - Cinnamon's Wake",
+                "videoMetadata": null,
+                "videoUrl": "https://videoservice.swm.digital/playback?appId=7plus&deviceType=web&platformType=web&ppId={ppId}&deviceId=[deviceId]&pc=[postcode]&advertid=[advertid]&accountId=5303576322001&referenceId=ref:GILG01-005&deliveryId={deliveryId}&videoType=vod&showId=GILG",
+                "videoType": "vod",
+                "episodePlayerId": "GILG01-005",
+                "image": {
+                  "name": "Gilmore Girls - S1 E5 - Cinnamon's Wake",
+                  "altTag": "Gilmore Girls Season 1 Episode 5",
+                  "url": "https://imagemap.swm.digital/image/GILG01-005",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "analytics": {
+                  "seriesTitle": "Gilmore Girls"
+                },
+                "dialogBox": {
+                  "text": "This show is available with a profile",
+                  "buttonText": "Continue",
+                  "contentLink": {
+                    "url": "/{path}?overlay=sign-in",
+                    "type": "navigationItem"
+                  }
+                },
+                "restricted": true,
+                "type": "EpisodePlayer"
+              },
+              "cardData": {
+                "title": "5. Cinnamon's Wake",
+                "subtitle": null,
+                "synopsis": "Lorelai forgets to tell Rory that she has a date with Rory's teacher Max. Rory has a new crush.",
+                "lozengeText": null,
+                "image": {
+                  "name": "Gilmore Girls - 5. Cinnamon's Wake",
+                  "altTag": "Gilmore Girls Season 1 Episode 5",
+                  "url": "https://imagemap.swm.digital/image/GILG01-005",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "contentLink": {
+                  "url": "/gilmore-girls?episode-id=GILG01-005&autoplay=true",
+                  "type": "navigationItem"
+                },
+                "expiresOn": null,
+                "duration": "40m",
+                "seriesBackgroundImage": {
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107348/gilg_16_9-background-image.jpg",
+                  "type": "image",
+                  "id": "579060",
+                  "cName": "gilg-16-9-background-image"
+                },
+                "seriesLogo": {
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107351/gilg_show-logo.png",
+                  "type": "image",
+                  "id": "579063",
+                  "cName": "gilg-show-logo"
+                },
+                "productionYear": "2000",
+                "type": "EpisodeCard"
+              },
+              "active": false,
+              "catalogueNumber": "GILG01-005",
+              "type": "EpisodeContainer"
+            }, {
+              "infoPanelData": {
+                "title": "Gilmore Girls",
+                "lozengeText": "",
+                "subtitle": "S1 E6 - Rory's Birthday Parties",
+                "shortSynopsis": "Rory gets upset at Emily, who plans a formal birthday party for her but feels that Rory is being ungrateful when Rory reveals that she would not like to have a formal birthday party.",
+                "genre": ["DRAMA"],
+                "classification": "PG",
+                "isClosedCaption": true,
+                "airDate": null,
+                "expiresOn": null,
+                "duration": null,
+                "seriesLogo": {
+                  "name": "Gilmore Girls",
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107345/gilg_1_1-shelf-image.jpg",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "buttonPanel": null,
+                "type": "EpisodeInfoPanel"
+              },
+              "playerData": {
+                "title": "S1 E6 - Rory's Birthday Parties",
+                "videoMetadata": null,
+                "videoUrl": "https://videoservice.swm.digital/playback?appId=7plus&deviceType=web&platformType=web&ppId={ppId}&deviceId=[deviceId]&pc=[postcode]&advertid=[advertid]&accountId=5303576322001&referenceId=ref:GILG01-006&deliveryId={deliveryId}&videoType=vod&showId=GILG",
+                "videoType": "vod",
+                "episodePlayerId": "GILG01-006",
+                "image": {
+                  "name": "Gilmore Girls - S1 E6 - Rory's Birthday Parties",
+                  "altTag": "Gilmore Girls Season 1 Episode 6",
+                  "url": "https://imagemap.swm.digital/image/GILG01-006",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "analytics": {
+                  "seriesTitle": "Gilmore Girls"
+                },
+                "dialogBox": {
+                  "text": "This show is available with a profile",
+                  "buttonText": "Continue",
+                  "contentLink": {
+                    "url": "/{path}?overlay=sign-in",
+                    "type": "navigationItem"
+                  }
+                },
+                "restricted": true,
+                "type": "EpisodePlayer"
+              },
+              "cardData": {
+                "title": "6. Rory's Birthday Parties",
+                "subtitle": null,
+                "synopsis": "Rory gets upset at Emily, who plans a formal birthday party for her but feels that Rory is being ungrateful when Rory reveals that she would not like to have a formal birthday party.",
+                "lozengeText": null,
+                "image": {
+                  "name": "Gilmore Girls - 6. Rory's Birthday Parties",
+                  "altTag": "Gilmore Girls Season 1 Episode 6",
+                  "url": "https://imagemap.swm.digital/image/GILG01-006",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "contentLink": {
+                  "url": "/gilmore-girls?episode-id=GILG01-006&autoplay=true",
+                  "type": "navigationItem"
+                },
+                "expiresOn": null,
+                "duration": "43m",
+                "seriesBackgroundImage": {
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107348/gilg_16_9-background-image.jpg",
+                  "type": "image",
+                  "id": "579060",
+                  "cName": "gilg-16-9-background-image"
+                },
+                "seriesLogo": {
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107351/gilg_show-logo.png",
+                  "type": "image",
+                  "id": "579063",
+                  "cName": "gilg-show-logo"
+                },
+                "productionYear": "2000",
+                "type": "EpisodeCard"
+              },
+              "active": false,
+              "catalogueNumber": "GILG01-006",
+              "type": "EpisodeContainer"
+            }, {
+              "infoPanelData": {
+                "title": "Gilmore Girls",
+                "lozengeText": "",
+                "subtitle": "S1 E7 - Kiss And Tell",
+                "shortSynopsis": "Rory decides not to tell her mother that she and Dean have kissed. Lorelai takes the liberty of inviting Dean over, and Rory is embarrassed by her mother's actions.",
+                "genre": ["DRAMA"],
+                "classification": "PG",
+                "isClosedCaption": true,
+                "airDate": null,
+                "expiresOn": null,
+                "duration": null,
+                "seriesLogo": {
+                  "name": "Gilmore Girls",
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107345/gilg_1_1-shelf-image.jpg",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "buttonPanel": null,
+                "type": "EpisodeInfoPanel"
+              },
+              "playerData": {
+                "title": "S1 E7 - Kiss And Tell",
+                "videoMetadata": null,
+                "videoUrl": "https://videoservice.swm.digital/playback?appId=7plus&deviceType=web&platformType=web&ppId={ppId}&deviceId=[deviceId]&pc=[postcode]&advertid=[advertid]&accountId=5303576322001&referenceId=ref:GILG01-007&deliveryId={deliveryId}&videoType=vod&showId=GILG",
+                "videoType": "vod",
+                "episodePlayerId": "GILG01-007",
+                "image": {
+                  "name": "Gilmore Girls - S1 E7 - Kiss And Tell",
+                  "altTag": "Gilmore Girls Season 1 Episode 7",
+                  "url": "https://imagemap.swm.digital/image/GILG01-007",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "analytics": {
+                  "seriesTitle": "Gilmore Girls"
+                },
+                "dialogBox": {
+                  "text": "This show is available with a profile",
+                  "buttonText": "Continue",
+                  "contentLink": {
+                    "url": "/{path}?overlay=sign-in",
+                    "type": "navigationItem"
+                  }
+                },
+                "restricted": true,
+                "type": "EpisodePlayer"
+              },
+              "cardData": {
+                "title": "7. Kiss And Tell",
+                "subtitle": null,
+                "synopsis": "Rory decides not to tell her mother that she and Dean have kissed. Lorelai takes the liberty of inviting Dean over, and Rory is embarrassed by her mother's actions.",
+                "lozengeText": null,
+                "image": {
+                  "name": "Gilmore Girls - 7. Kiss And Tell",
+                  "altTag": "Gilmore Girls Season 1 Episode 7",
+                  "url": "https://imagemap.swm.digital/image/GILG01-007",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "contentLink": {
+                  "url": "/gilmore-girls?episode-id=GILG01-007&autoplay=true",
+                  "type": "navigationItem"
+                },
+                "expiresOn": null,
+                "duration": "43m",
+                "seriesBackgroundImage": {
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107348/gilg_16_9-background-image.jpg",
+                  "type": "image",
+                  "id": "579060",
+                  "cName": "gilg-16-9-background-image"
+                },
+                "seriesLogo": {
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107351/gilg_show-logo.png",
+                  "type": "image",
+                  "id": "579063",
+                  "cName": "gilg-show-logo"
+                },
+                "productionYear": "2000",
+                "type": "EpisodeCard"
+              },
+              "active": false,
+              "catalogueNumber": "GILG01-007",
+              "type": "EpisodeContainer"
+            }, {
+              "infoPanelData": {
+                "title": "Gilmore Girls",
+                "lozengeText": "",
+                "subtitle": "S1 E8 - Love & War & Snow",
+                "shortSynopsis": "Lorelai shares a wonderful day with Max while Rory is snowed in at her grandparents' home. Lane misses Rory and comes to visit.",
+                "genre": ["DRAMA"],
+                "classification": "PG",
+                "isClosedCaption": true,
+                "airDate": null,
+                "expiresOn": null,
+                "duration": null,
+                "seriesLogo": {
+                  "name": "Gilmore Girls",
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107345/gilg_1_1-shelf-image.jpg",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "buttonPanel": null,
+                "type": "EpisodeInfoPanel"
+              },
+              "playerData": {
+                "title": "S1 E8 - Love & War & Snow",
+                "videoMetadata": null,
+                "videoUrl": "https://videoservice.swm.digital/playback?appId=7plus&deviceType=web&platformType=web&ppId={ppId}&deviceId=[deviceId]&pc=[postcode]&advertid=[advertid]&accountId=5303576322001&referenceId=ref:GILG01-008&deliveryId={deliveryId}&videoType=vod&showId=GILG",
+                "videoType": "vod",
+                "episodePlayerId": "GILG01-008",
+                "image": {
+                  "name": "Gilmore Girls - S1 E8 - Love & War & Snow",
+                  "altTag": "Gilmore Girls Season 1 Episode 8",
+                  "url": "https://imagemap.swm.digital/image/GILG01-008",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "analytics": {
+                  "seriesTitle": "Gilmore Girls"
+                },
+                "dialogBox": {
+                  "text": "This show is available with a profile",
+                  "buttonText": "Continue",
+                  "contentLink": {
+                    "url": "/{path}?overlay=sign-in",
+                    "type": "navigationItem"
+                  }
+                },
+                "restricted": true,
+                "type": "EpisodePlayer"
+              },
+              "cardData": {
+                "title": "8. Love & War & Snow",
+                "subtitle": null,
+                "synopsis": "Lorelai shares a wonderful day with Max while Rory is snowed in at her grandparents' home. Lane misses Rory and comes to visit.",
+                "lozengeText": null,
+                "image": {
+                  "name": "Gilmore Girls - 8. Love & War & Snow",
+                  "altTag": "Gilmore Girls Season 1 Episode 8",
+                  "url": "https://imagemap.swm.digital/image/GILG01-008",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "contentLink": {
+                  "url": "/gilmore-girls?episode-id=GILG01-008&autoplay=true",
+                  "type": "navigationItem"
+                },
+                "expiresOn": null,
+                "duration": "43m",
+                "seriesBackgroundImage": {
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107348/gilg_16_9-background-image.jpg",
+                  "type": "image",
+                  "id": "579060",
+                  "cName": "gilg-16-9-background-image"
+                },
+                "seriesLogo": {
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107351/gilg_show-logo.png",
+                  "type": "image",
+                  "id": "579063",
+                  "cName": "gilg-show-logo"
+                },
+                "productionYear": "2000",
+                "type": "EpisodeCard"
+              },
+              "active": false,
+              "catalogueNumber": "GILG01-008",
+              "type": "EpisodeContainer"
+            }, {
+              "infoPanelData": {
+                "title": "Gilmore Girls",
+                "lozengeText": "",
+                "subtitle": "S1 E9 - Rory's Dance",
+                "shortSynopsis": "Rory goes to the dance with Dean, who clashes with two jealous boys. They fall asleep in Miss Patty's studio, and Rory rushes home to find her mother and grandmother arguing about her future.",
+                "genre": ["DRAMA"],
+                "classification": "PG",
+                "isClosedCaption": true,
+                "airDate": null,
+                "expiresOn": null,
+                "duration": null,
+                "seriesLogo": {
+                  "name": "Gilmore Girls",
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107345/gilg_1_1-shelf-image.jpg",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "buttonPanel": null,
+                "type": "EpisodeInfoPanel"
+              },
+              "playerData": {
+                "title": "S1 E9 - Rory's Dance",
+                "videoMetadata": null,
+                "videoUrl": "https://videoservice.swm.digital/playback?appId=7plus&deviceType=web&platformType=web&ppId={ppId}&deviceId=[deviceId]&pc=[postcode]&advertid=[advertid]&accountId=5303576322001&referenceId=ref:GILG01-009&deliveryId={deliveryId}&videoType=vod&showId=GILG",
+                "videoType": "vod",
+                "episodePlayerId": "GILG01-009",
+                "image": {
+                  "name": "Gilmore Girls - S1 E9 - Rory's Dance",
+                  "altTag": "Gilmore Girls Season 1 Episode 9",
+                  "url": "https://imagemap.swm.digital/image/GILG01-009",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "analytics": {
+                  "seriesTitle": "Gilmore Girls"
+                },
+                "dialogBox": {
+                  "text": "This show is available with a profile",
+                  "buttonText": "Continue",
+                  "contentLink": {
+                    "url": "/{path}?overlay=sign-in",
+                    "type": "navigationItem"
+                  }
+                },
+                "restricted": true,
+                "type": "EpisodePlayer"
+              },
+              "cardData": {
+                "title": "9. Rory's Dance",
+                "subtitle": null,
+                "synopsis": "Rory goes to the dance with Dean, who clashes with two jealous boys. They fall asleep in Miss Patty's studio, and Rory rushes home to find her mother and grandmother arguing about her future.",
+                "lozengeText": null,
+                "image": {
+                  "name": "Gilmore Girls - 9. Rory's Dance",
+                  "altTag": "Gilmore Girls Season 1 Episode 9",
+                  "url": "https://imagemap.swm.digital/image/GILG01-009",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "contentLink": {
+                  "url": "/gilmore-girls?episode-id=GILG01-009&autoplay=true",
+                  "type": "navigationItem"
+                },
+                "expiresOn": null,
+                "duration": "43m",
+                "seriesBackgroundImage": {
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107348/gilg_16_9-background-image.jpg",
+                  "type": "image",
+                  "id": "579060",
+                  "cName": "gilg-16-9-background-image"
+                },
+                "seriesLogo": {
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107351/gilg_show-logo.png",
+                  "type": "image",
+                  "id": "579063",
+                  "cName": "gilg-show-logo"
+                },
+                "productionYear": "2000",
+                "type": "EpisodeCard"
+              },
+              "active": false,
+              "catalogueNumber": "GILG01-009",
+              "type": "EpisodeContainer"
+            }, {
+              "infoPanelData": {
+                "title": "Gilmore Girls",
+                "lozengeText": "",
+                "subtitle": "S1 E10 - Forgiveness And Stuff",
+                "shortSynopsis": "Richard collapses at the Gilmores' Christmas party. Dean assures Lorelai that nothing improper happened on the night he and Rory fell asleep together.",
+                "genre": ["DRAMA"],
+                "classification": "PG",
+                "isClosedCaption": true,
+                "airDate": null,
+                "expiresOn": null,
+                "duration": null,
+                "seriesLogo": {
+                  "name": "Gilmore Girls",
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107345/gilg_1_1-shelf-image.jpg",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "buttonPanel": null,
+                "type": "EpisodeInfoPanel"
+              },
+              "playerData": {
+                "title": "S1 E10 - Forgiveness And Stuff",
+                "videoMetadata": null,
+                "videoUrl": "https://videoservice.swm.digital/playback?appId=7plus&deviceType=web&platformType=web&ppId={ppId}&deviceId=[deviceId]&pc=[postcode]&advertid=[advertid]&accountId=5303576322001&referenceId=ref:GILG01-010&deliveryId={deliveryId}&videoType=vod&showId=GILG",
+                "videoType": "vod",
+                "episodePlayerId": "GILG01-010",
+                "image": {
+                  "name": "Gilmore Girls - S1 E10 - Forgiveness And Stuff",
+                  "altTag": "Gilmore Girls Season 1 Episode 10",
+                  "url": "https://imagemap.swm.digital/image/GILG01-010",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "analytics": {
+                  "seriesTitle": "Gilmore Girls"
+                },
+                "dialogBox": {
+                  "text": "This show is available with a profile",
+                  "buttonText": "Continue",
+                  "contentLink": {
+                    "url": "/{path}?overlay=sign-in",
+                    "type": "navigationItem"
+                  }
+                },
+                "restricted": true,
+                "type": "EpisodePlayer"
+              },
+              "cardData": {
+                "title": "10. Forgiveness And Stuff",
+                "subtitle": null,
+                "synopsis": "Richard collapses at the Gilmores' Christmas party. Dean assures Lorelai that nothing improper happened on the night he and Rory fell asleep together.",
+                "lozengeText": null,
+                "image": {
+                  "name": "Gilmore Girls - 10. Forgiveness And Stuff",
+                  "altTag": "Gilmore Girls Season 1 Episode 10",
+                  "url": "https://imagemap.swm.digital/image/GILG01-010",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "contentLink": {
+                  "url": "/gilmore-girls?episode-id=GILG01-010&autoplay=true",
+                  "type": "navigationItem"
+                },
+                "expiresOn": null,
+                "duration": "41m",
+                "seriesBackgroundImage": {
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107348/gilg_16_9-background-image.jpg",
+                  "type": "image",
+                  "id": "579060",
+                  "cName": "gilg-16-9-background-image"
+                },
+                "seriesLogo": {
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107351/gilg_show-logo.png",
+                  "type": "image",
+                  "id": "579063",
+                  "cName": "gilg-show-logo"
+                },
+                "productionYear": "2000",
+                "type": "EpisodeCard"
+              },
+              "active": false,
+              "catalogueNumber": "GILG01-010",
+              "type": "EpisodeContainer"
+            }, {
+              "infoPanelData": {
+                "title": "Gilmore Girls",
+                "lozengeText": "",
+                "subtitle": "S1 E11 - Paris Is Burning",
+                "shortSynopsis": "Paris exposes Lorelai and Max's relationship, causing a scandal and their breakup. Rory confronts Paris, who admits she wanted to deflect attention from her parents' divorce.",
+                "genre": ["DRAMA"],
+                "classification": "PG",
+                "isClosedCaption": true,
+                "airDate": null,
+                "expiresOn": null,
+                "duration": null,
+                "seriesLogo": {
+                  "name": "Gilmore Girls",
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107345/gilg_1_1-shelf-image.jpg",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "buttonPanel": null,
+                "type": "EpisodeInfoPanel"
+              },
+              "playerData": {
+                "title": "S1 E11 - Paris Is Burning",
+                "videoMetadata": null,
+                "videoUrl": "https://videoservice.swm.digital/playback?appId=7plus&deviceType=web&platformType=web&ppId={ppId}&deviceId=[deviceId]&pc=[postcode]&advertid=[advertid]&accountId=5303576322001&referenceId=ref:GILG01-011&deliveryId={deliveryId}&videoType=vod&showId=GILG",
+                "videoType": "vod",
+                "episodePlayerId": "GILG01-011",
+                "image": {
+                  "name": "Gilmore Girls - S1 E11 - Paris Is Burning",
+                  "altTag": "Gilmore Girls Season 1 Episode 11",
+                  "url": "https://imagemap.swm.digital/image/GILG01-011",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "analytics": {
+                  "seriesTitle": "Gilmore Girls"
+                },
+                "dialogBox": {
+                  "text": "This show is available with a profile",
+                  "buttonText": "Continue",
+                  "contentLink": {
+                    "url": "/{path}?overlay=sign-in",
+                    "type": "navigationItem"
+                  }
+                },
+                "restricted": true,
+                "type": "EpisodePlayer"
+              },
+              "cardData": {
+                "title": "11. Paris Is Burning",
+                "subtitle": null,
+                "synopsis": "Paris exposes Lorelai and Max's relationship, causing a scandal and their breakup. Rory confronts Paris, who admits she wanted to deflect attention from her parents' divorce.",
+                "lozengeText": null,
+                "image": {
+                  "name": "Gilmore Girls - 11. Paris Is Burning",
+                  "altTag": "Gilmore Girls Season 1 Episode 11",
+                  "url": "https://imagemap.swm.digital/image/GILG01-011",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "contentLink": {
+                  "url": "/gilmore-girls?episode-id=GILG01-011&autoplay=true",
+                  "type": "navigationItem"
+                },
+                "expiresOn": null,
+                "duration": "43m",
+                "seriesBackgroundImage": {
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107348/gilg_16_9-background-image.jpg",
+                  "type": "image",
+                  "id": "579060",
+                  "cName": "gilg-16-9-background-image"
+                },
+                "seriesLogo": {
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107351/gilg_show-logo.png",
+                  "type": "image",
+                  "id": "579063",
+                  "cName": "gilg-show-logo"
+                },
+                "productionYear": "2000",
+                "type": "EpisodeCard"
+              },
+              "active": false,
+              "catalogueNumber": "GILG01-011",
+              "type": "EpisodeContainer"
+            }, {
+              "infoPanelData": {
+                "title": "Gilmore Girls",
+                "lozengeText": "",
+                "subtitle": "S1 E12 - Double Date",
+                "shortSynopsis": "Lorelai finds herself on a hellish double date with Sookie, Jackson, and Jackson's very odd cousin. Meanwhile Rory double dates with Dean, Lane, and Dean's friend. They keep their plans secret.",
+                "genre": ["DRAMA"],
+                "classification": "PG",
+                "isClosedCaption": true,
+                "airDate": null,
+                "expiresOn": null,
+                "duration": null,
+                "seriesLogo": {
+                  "name": "Gilmore Girls",
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107345/gilg_1_1-shelf-image.jpg",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "buttonPanel": null,
+                "type": "EpisodeInfoPanel"
+              },
+              "playerData": {
+                "title": "S1 E12 - Double Date",
+                "videoMetadata": null,
+                "videoUrl": "https://videoservice.swm.digital/playback?appId=7plus&deviceType=web&platformType=web&ppId={ppId}&deviceId=[deviceId]&pc=[postcode]&advertid=[advertid]&accountId=5303576322001&referenceId=ref:GILG01-012&deliveryId={deliveryId}&videoType=vod&showId=GILG",
+                "videoType": "vod",
+                "episodePlayerId": "GILG01-012",
+                "image": {
+                  "name": "Gilmore Girls - S1 E12 - Double Date",
+                  "altTag": "Gilmore Girls Season 1 Episode 12",
+                  "url": "https://imagemap.swm.digital/image/GILG01-012",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "analytics": {
+                  "seriesTitle": "Gilmore Girls"
+                },
+                "dialogBox": {
+                  "text": "This show is available with a profile",
+                  "buttonText": "Continue",
+                  "contentLink": {
+                    "url": "/{path}?overlay=sign-in",
+                    "type": "navigationItem"
+                  }
+                },
+                "restricted": true,
+                "type": "EpisodePlayer"
+              },
+              "cardData": {
+                "title": "12. Double Date",
+                "subtitle": null,
+                "synopsis": "Lorelai finds herself on a hellish double date with Sookie, Jackson, and Jackson's very odd cousin. Meanwhile Rory double dates with Dean, Lane, and Dean's friend. They keep their plans secret.",
+                "lozengeText": null,
+                "image": {
+                  "name": "Gilmore Girls - 12. Double Date",
+                  "altTag": "Gilmore Girls Season 1 Episode 12",
+                  "url": "https://imagemap.swm.digital/image/GILG01-012",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "contentLink": {
+                  "url": "/gilmore-girls?episode-id=GILG01-012&autoplay=true",
+                  "type": "navigationItem"
+                },
+                "expiresOn": null,
+                "duration": "40m",
+                "seriesBackgroundImage": {
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107348/gilg_16_9-background-image.jpg",
+                  "type": "image",
+                  "id": "579060",
+                  "cName": "gilg-16-9-background-image"
+                },
+                "seriesLogo": {
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107351/gilg_show-logo.png",
+                  "type": "image",
+                  "id": "579063",
+                  "cName": "gilg-show-logo"
+                },
+                "productionYear": "2000",
+                "type": "EpisodeCard"
+              },
+              "active": false,
+              "catalogueNumber": "GILG01-012",
+              "type": "EpisodeContainer"
+            }, {
+              "infoPanelData": {
+                "title": "Gilmore Girls",
+                "lozengeText": "",
+                "subtitle": "S1 E13 - Concert Interruptus",
+                "shortSynopsis": "Trouble occurs when Rory brings her friends to a concert by The Bangles.",
+                "genre": ["DRAMA"],
+                "classification": "PG",
+                "isClosedCaption": true,
+                "airDate": null,
+                "expiresOn": null,
+                "duration": null,
+                "seriesLogo": {
+                  "name": "Gilmore Girls",
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107345/gilg_1_1-shelf-image.jpg",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "buttonPanel": null,
+                "type": "EpisodeInfoPanel"
+              },
+              "playerData": {
+                "title": "S1 E13 - Concert Interruptus",
+                "videoMetadata": null,
+                "videoUrl": "https://videoservice.swm.digital/playback?appId=7plus&deviceType=web&platformType=web&ppId={ppId}&deviceId=[deviceId]&pc=[postcode]&advertid=[advertid]&accountId=5303576322001&referenceId=ref:GILG01-013&deliveryId={deliveryId}&videoType=vod&showId=GILG",
+                "videoType": "vod",
+                "episodePlayerId": "GILG01-013",
+                "image": {
+                  "name": "Gilmore Girls - S1 E13 - Concert Interruptus",
+                  "altTag": "Gilmore Girls Season 1 Episode 13",
+                  "url": "https://imagemap.swm.digital/image/GILG01-013",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "analytics": {
+                  "seriesTitle": "Gilmore Girls"
+                },
+                "dialogBox": {
+                  "text": "This show is available with a profile",
+                  "buttonText": "Continue",
+                  "contentLink": {
+                    "url": "/{path}?overlay=sign-in",
+                    "type": "navigationItem"
+                  }
+                },
+                "restricted": true,
+                "type": "EpisodePlayer"
+              },
+              "cardData": {
+                "title": "13. Concert Interruptus",
+                "subtitle": null,
+                "synopsis": "Trouble occurs when Rory brings her friends to a concert by The Bangles.",
+                "lozengeText": null,
+                "image": {
+                  "name": "Gilmore Girls - 13. Concert Interruptus",
+                  "altTag": "Gilmore Girls Season 1 Episode 13",
+                  "url": "https://imagemap.swm.digital/image/GILG01-013",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "contentLink": {
+                  "url": "/gilmore-girls?episode-id=GILG01-013&autoplay=true",
+                  "type": "navigationItem"
+                },
+                "expiresOn": null,
+                "duration": "38m",
+                "seriesBackgroundImage": {
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107348/gilg_16_9-background-image.jpg",
+                  "type": "image",
+                  "id": "579060",
+                  "cName": "gilg-16-9-background-image"
+                },
+                "seriesLogo": {
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107351/gilg_show-logo.png",
+                  "type": "image",
+                  "id": "579063",
+                  "cName": "gilg-show-logo"
+                },
+                "productionYear": "2000",
+                "type": "EpisodeCard"
+              },
+              "active": false,
+              "catalogueNumber": "GILG01-013",
+              "type": "EpisodeContainer"
+            }, {
+              "infoPanelData": {
+                "title": "Gilmore Girls",
+                "lozengeText": "",
+                "subtitle": "S1 E14 - That Damn Donna Reed",
+                "shortSynopsis": "Rory and Dean disagree about women's roles after watching \"The Donna Reed Show.\"",
+                "genre": ["DRAMA"],
+                "classification": "PG",
+                "isClosedCaption": true,
+                "airDate": null,
+                "expiresOn": null,
+                "duration": null,
+                "seriesLogo": {
+                  "name": "Gilmore Girls",
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107345/gilg_1_1-shelf-image.jpg",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "buttonPanel": null,
+                "type": "EpisodeInfoPanel"
+              },
+              "playerData": {
+                "title": "S1 E14 - That Damn Donna Reed",
+                "videoMetadata": null,
+                "videoUrl": "https://videoservice.swm.digital/playback?appId=7plus&deviceType=web&platformType=web&ppId={ppId}&deviceId=[deviceId]&pc=[postcode]&advertid=[advertid]&accountId=5303576322001&referenceId=ref:GILG01-014&deliveryId={deliveryId}&videoType=vod&showId=GILG",
+                "videoType": "vod",
+                "episodePlayerId": "GILG01-014",
+                "image": {
+                  "name": "Gilmore Girls - S1 E14 - That Damn Donna Reed",
+                  "altTag": "Gilmore Girls Season 1 Episode 14",
+                  "url": "https://imagemap.swm.digital/image/GILG01-014",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "analytics": {
+                  "seriesTitle": "Gilmore Girls"
+                },
+                "dialogBox": {
+                  "text": "This show is available with a profile",
+                  "buttonText": "Continue",
+                  "contentLink": {
+                    "url": "/{path}?overlay=sign-in",
+                    "type": "navigationItem"
+                  }
+                },
+                "restricted": true,
+                "type": "EpisodePlayer"
+              },
+              "cardData": {
+                "title": "14. That Damn Donna Reed",
+                "subtitle": null,
+                "synopsis": "Rory and Dean disagree about women's roles after watching \"The Donna Reed Show.\"",
+                "lozengeText": null,
+                "image": {
+                  "name": "Gilmore Girls - 14. That Damn Donna Reed",
+                  "altTag": "Gilmore Girls Season 1 Episode 14",
+                  "url": "https://imagemap.swm.digital/image/GILG01-014",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "contentLink": {
+                  "url": "/gilmore-girls?episode-id=GILG01-014&autoplay=true",
+                  "type": "navigationItem"
+                },
+                "expiresOn": null,
+                "duration": "43m",
+                "seriesBackgroundImage": {
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107348/gilg_16_9-background-image.jpg",
+                  "type": "image",
+                  "id": "579060",
+                  "cName": "gilg-16-9-background-image"
+                },
+                "seriesLogo": {
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107351/gilg_show-logo.png",
+                  "type": "image",
+                  "id": "579063",
+                  "cName": "gilg-show-logo"
+                },
+                "productionYear": "2000",
+                "type": "EpisodeCard"
+              },
+              "active": false,
+              "catalogueNumber": "GILG01-014",
+              "type": "EpisodeContainer"
+            }, {
+              "infoPanelData": {
+                "title": "Gilmore Girls",
+                "lozengeText": "",
+                "subtitle": "S1 E15 - Christopher Returns",
+                "shortSynopsis": "Rory's father, Christopher, returns, causing tension in Emily and Richard's house and forcing Lorelai to make a big decision about her family's future.",
+                "genre": ["DRAMA"],
+                "classification": "PG",
+                "isClosedCaption": true,
+                "airDate": null,
+                "expiresOn": null,
+                "duration": null,
+                "seriesLogo": {
+                  "name": "Gilmore Girls",
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107345/gilg_1_1-shelf-image.jpg",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "buttonPanel": null,
+                "type": "EpisodeInfoPanel"
+              },
+              "playerData": {
+                "title": "S1 E15 - Christopher Returns",
+                "videoMetadata": null,
+                "videoUrl": "https://videoservice.swm.digital/playback?appId=7plus&deviceType=web&platformType=web&ppId={ppId}&deviceId=[deviceId]&pc=[postcode]&advertid=[advertid]&accountId=5303576322001&referenceId=ref:GILG01-015&deliveryId={deliveryId}&videoType=vod&showId=GILG",
+                "videoType": "vod",
+                "episodePlayerId": "GILG01-015",
+                "image": {
+                  "name": "Gilmore Girls - S1 E15 - Christopher Returns",
+                  "altTag": "Gilmore Girls Season 1 Episode 15",
+                  "url": "https://imagemap.swm.digital/image/GILG01-015",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "analytics": {
+                  "seriesTitle": "Gilmore Girls"
+                },
+                "dialogBox": {
+                  "text": "This show is available with a profile",
+                  "buttonText": "Continue",
+                  "contentLink": {
+                    "url": "/{path}?overlay=sign-in",
+                    "type": "navigationItem"
+                  }
+                },
+                "restricted": true,
+                "type": "EpisodePlayer"
+              },
+              "cardData": {
+                "title": "15. Christopher Returns",
+                "subtitle": null,
+                "synopsis": "Rory's father, Christopher, returns, causing tension in Emily and Richard's house and forcing Lorelai to make a big decision about her family's future.",
+                "lozengeText": null,
+                "image": {
+                  "name": "Gilmore Girls - 15. Christopher Returns",
+                  "altTag": "Gilmore Girls Season 1 Episode 15",
+                  "url": "https://imagemap.swm.digital/image/GILG01-015",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "contentLink": {
+                  "url": "/gilmore-girls?episode-id=GILG01-015&autoplay=true",
+                  "type": "navigationItem"
+                },
+                "expiresOn": null,
+                "duration": "41m",
+                "seriesBackgroundImage": {
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107348/gilg_16_9-background-image.jpg",
+                  "type": "image",
+                  "id": "579060",
+                  "cName": "gilg-16-9-background-image"
+                },
+                "seriesLogo": {
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107351/gilg_show-logo.png",
+                  "type": "image",
+                  "id": "579063",
+                  "cName": "gilg-show-logo"
+                },
+                "productionYear": "2000",
+                "type": "EpisodeCard"
+              },
+              "active": false,
+              "catalogueNumber": "GILG01-015",
+              "type": "EpisodeContainer"
+            }, {
+              "infoPanelData": {
+                "title": "Gilmore Girls",
+                "lozengeText": "",
+                "subtitle": "S1 E16 - Star-Crossed Lovers & Other Strangers",
+                "shortSynopsis": "Dean and Rory share a special evening as the town celebrates its romantic history.",
+                "genre": ["DRAMA"],
+                "classification": "PG",
+                "isClosedCaption": true,
+                "airDate": null,
+                "expiresOn": null,
+                "duration": null,
+                "seriesLogo": {
+                  "name": "Gilmore Girls",
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107345/gilg_1_1-shelf-image.jpg",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "buttonPanel": null,
+                "type": "EpisodeInfoPanel"
+              },
+              "playerData": {
+                "title": "S1 E16 - Star-Crossed Lovers & Other Strangers",
+                "videoMetadata": null,
+                "videoUrl": "https://videoservice.swm.digital/playback?appId=7plus&deviceType=web&platformType=web&ppId={ppId}&deviceId=[deviceId]&pc=[postcode]&advertid=[advertid]&accountId=5303576322001&referenceId=ref:GILG01-016&deliveryId={deliveryId}&videoType=vod&showId=GILG",
+                "videoType": "vod",
+                "episodePlayerId": "GILG01-016",
+                "image": {
+                  "name": "Gilmore Girls - S1 E16 - Star-Crossed Lovers & Other Strangers",
+                  "altTag": "Gilmore Girls Season 1 Episode 16",
+                  "url": "https://imagemap.swm.digital/image/GILG01-016",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "analytics": {
+                  "seriesTitle": "Gilmore Girls"
+                },
+                "dialogBox": {
+                  "text": "This show is available with a profile",
+                  "buttonText": "Continue",
+                  "contentLink": {
+                    "url": "/{path}?overlay=sign-in",
+                    "type": "navigationItem"
+                  }
+                },
+                "restricted": true,
+                "type": "EpisodePlayer"
+              },
+              "cardData": {
+                "title": "16. Star-Crossed Lovers & Other Strangers",
+                "subtitle": null,
+                "synopsis": "Dean and Rory share a special evening as the town celebrates its romantic history.",
+                "lozengeText": null,
+                "image": {
+                  "name": "Gilmore Girls - 16. Star-Crossed Lovers & Other Strangers",
+                  "altTag": "Gilmore Girls Season 1 Episode 16",
+                  "url": "https://imagemap.swm.digital/image/GILG01-016",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "contentLink": {
+                  "url": "/gilmore-girls?episode-id=GILG01-016&autoplay=true",
+                  "type": "navigationItem"
+                },
+                "expiresOn": null,
+                "duration": "43m",
+                "seriesBackgroundImage": {
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107348/gilg_16_9-background-image.jpg",
+                  "type": "image",
+                  "id": "579060",
+                  "cName": "gilg-16-9-background-image"
+                },
+                "seriesLogo": {
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107351/gilg_show-logo.png",
+                  "type": "image",
+                  "id": "579063",
+                  "cName": "gilg-show-logo"
+                },
+                "productionYear": "2000",
+                "type": "EpisodeCard"
+              },
+              "active": false,
+              "catalogueNumber": "GILG01-016",
+              "type": "EpisodeContainer"
+            }, {
+              "infoPanelData": {
+                "title": "Gilmore Girls",
+                "lozengeText": "",
+                "subtitle": "S1 E17 - The Breakup, Part II",
+                "shortSynopsis": "Dean breaks up with Rory on their third anniversary. At a party, Rory meets Tristin, who kisses her, making her realize her confusion and misery. Meanwhile, Lorelai and Max rekindle their romance.",
+                "genre": ["DRAMA"],
+                "classification": "PG",
+                "isClosedCaption": true,
+                "airDate": null,
+                "expiresOn": null,
+                "duration": null,
+                "seriesLogo": {
+                  "name": "Gilmore Girls",
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107345/gilg_1_1-shelf-image.jpg",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "buttonPanel": null,
+                "type": "EpisodeInfoPanel"
+              },
+              "playerData": {
+                "title": "S1 E17 - The Breakup, Part II",
+                "videoMetadata": null,
+                "videoUrl": "https://videoservice.swm.digital/playback?appId=7plus&deviceType=web&platformType=web&ppId={ppId}&deviceId=[deviceId]&pc=[postcode]&advertid=[advertid]&accountId=5303576322001&referenceId=ref:GILG01-017&deliveryId={deliveryId}&videoType=vod&showId=GILG",
+                "videoType": "vod",
+                "episodePlayerId": "GILG01-017",
+                "image": {
+                  "name": "Gilmore Girls - S1 E17 - The Breakup, Part II",
+                  "altTag": "Gilmore Girls Season 1 Episode 17",
+                  "url": "https://imagemap.swm.digital/image/GILG01-017",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "analytics": {
+                  "seriesTitle": "Gilmore Girls"
+                },
+                "dialogBox": {
+                  "text": "This show is available with a profile",
+                  "buttonText": "Continue",
+                  "contentLink": {
+                    "url": "/{path}?overlay=sign-in",
+                    "type": "navigationItem"
+                  }
+                },
+                "restricted": true,
+                "type": "EpisodePlayer"
+              },
+              "cardData": {
+                "title": "17. The Breakup, Part II",
+                "subtitle": null,
+                "synopsis": "Dean breaks up with Rory on their third anniversary. At a party, Rory meets Tristin, who kisses her, making her realize her confusion and misery. Meanwhile, Lorelai and Max rekindle their romance.",
+                "lozengeText": null,
+                "image": {
+                  "name": "Gilmore Girls - 17. The Breakup, Part II",
+                  "altTag": "Gilmore Girls Season 1 Episode 17",
+                  "url": "https://imagemap.swm.digital/image/GILG01-017",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "contentLink": {
+                  "url": "/gilmore-girls?episode-id=GILG01-017&autoplay=true",
+                  "type": "navigationItem"
+                },
+                "expiresOn": null,
+                "duration": "43m",
+                "seriesBackgroundImage": {
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107348/gilg_16_9-background-image.jpg",
+                  "type": "image",
+                  "id": "579060",
+                  "cName": "gilg-16-9-background-image"
+                },
+                "seriesLogo": {
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107351/gilg_show-logo.png",
+                  "type": "image",
+                  "id": "579063",
+                  "cName": "gilg-show-logo"
+                },
+                "productionYear": "2000",
+                "type": "EpisodeCard"
+              },
+              "active": false,
+              "catalogueNumber": "GILG01-017",
+              "type": "EpisodeContainer"
+            }, {
+              "infoPanelData": {
+                "title": "Gilmore Girls",
+                "lozengeText": "",
+                "subtitle": "S1 E18 - The Third Lorelai",
+                "shortSynopsis": "Emily fears losing contact with Lorelai and Rory if they accept a trust fund. Rory feels awkward around Tristin after their kiss and tries to pair him with Paris, unaware of his interest in her.",
+                "genre": ["DRAMA"],
+                "classification": "PG",
+                "isClosedCaption": true,
+                "airDate": null,
+                "expiresOn": null,
+                "duration": null,
+                "seriesLogo": {
+                  "name": "Gilmore Girls",
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107345/gilg_1_1-shelf-image.jpg",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "buttonPanel": null,
+                "type": "EpisodeInfoPanel"
+              },
+              "playerData": {
+                "title": "S1 E18 - The Third Lorelai",
+                "videoMetadata": null,
+                "videoUrl": "https://videoservice.swm.digital/playback?appId=7plus&deviceType=web&platformType=web&ppId={ppId}&deviceId=[deviceId]&pc=[postcode]&advertid=[advertid]&accountId=5303576322001&referenceId=ref:GILG01-018&deliveryId={deliveryId}&videoType=vod&showId=GILG",
+                "videoType": "vod",
+                "episodePlayerId": "GILG01-018",
+                "image": {
+                  "name": "Gilmore Girls - S1 E18 - The Third Lorelai",
+                  "altTag": "Gilmore Girls Season 1 Episode 18",
+                  "url": "https://imagemap.swm.digital/image/GILG01-018",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "analytics": {
+                  "seriesTitle": "Gilmore Girls"
+                },
+                "dialogBox": {
+                  "text": "This show is available with a profile",
+                  "buttonText": "Continue",
+                  "contentLink": {
+                    "url": "/{path}?overlay=sign-in",
+                    "type": "navigationItem"
+                  }
+                },
+                "restricted": true,
+                "type": "EpisodePlayer"
+              },
+              "cardData": {
+                "title": "18. The Third Lorelai",
+                "subtitle": null,
+                "synopsis": "Emily fears losing contact with Lorelai and Rory if they accept a trust fund. Rory feels awkward around Tristin after their kiss and tries to pair him with Paris, unaware of his interest in her.",
+                "lozengeText": null,
+                "image": {
+                  "name": "Gilmore Girls - 18. The Third Lorelai",
+                  "altTag": "Gilmore Girls Season 1 Episode 18",
+                  "url": "https://imagemap.swm.digital/image/GILG01-018",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "contentLink": {
+                  "url": "/gilmore-girls?episode-id=GILG01-018&autoplay=true",
+                  "type": "navigationItem"
+                },
+                "expiresOn": null,
+                "duration": "43m",
+                "seriesBackgroundImage": {
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107348/gilg_16_9-background-image.jpg",
+                  "type": "image",
+                  "id": "579060",
+                  "cName": "gilg-16-9-background-image"
+                },
+                "seriesLogo": {
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107351/gilg_show-logo.png",
+                  "type": "image",
+                  "id": "579063",
+                  "cName": "gilg-show-logo"
+                },
+                "productionYear": "2000",
+                "type": "EpisodeCard"
+              },
+              "active": false,
+              "catalogueNumber": "GILG01-018",
+              "type": "EpisodeContainer"
+            }, {
+              "infoPanelData": {
+                "title": "Gilmore Girls",
+                "lozengeText": "",
+                "subtitle": "S1 E19 - Emily In Wonderland",
+                "shortSynopsis": "Emily tries to create the perfect bedroom for Rory in her house. Lorelai convinces Luke to give his former girlfriend a chance to reconcile with him.",
+                "genre": ["DRAMA"],
+                "classification": "PG",
+                "isClosedCaption": true,
+                "airDate": null,
+                "expiresOn": null,
+                "duration": null,
+                "seriesLogo": {
+                  "name": "Gilmore Girls",
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107345/gilg_1_1-shelf-image.jpg",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "buttonPanel": null,
+                "type": "EpisodeInfoPanel"
+              },
+              "playerData": {
+                "title": "S1 E19 - Emily In Wonderland",
+                "videoMetadata": null,
+                "videoUrl": "https://videoservice.swm.digital/playback?appId=7plus&deviceType=web&platformType=web&ppId={ppId}&deviceId=[deviceId]&pc=[postcode]&advertid=[advertid]&accountId=5303576322001&referenceId=ref:GILG01-019&deliveryId={deliveryId}&videoType=vod&showId=GILG",
+                "videoType": "vod",
+                "episodePlayerId": "GILG01-019",
+                "image": {
+                  "name": "Gilmore Girls - S1 E19 - Emily In Wonderland",
+                  "altTag": "Gilmore Girls Season 1 Episode 19",
+                  "url": "https://imagemap.swm.digital/image/GILG01-019",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "analytics": {
+                  "seriesTitle": "Gilmore Girls"
+                },
+                "dialogBox": {
+                  "text": "This show is available with a profile",
+                  "buttonText": "Continue",
+                  "contentLink": {
+                    "url": "/{path}?overlay=sign-in",
+                    "type": "navigationItem"
+                  }
+                },
+                "restricted": true,
+                "type": "EpisodePlayer"
+              },
+              "cardData": {
+                "title": "19. Emily In Wonderland",
+                "subtitle": null,
+                "synopsis": "Emily tries to create the perfect bedroom for Rory in her house. Lorelai convinces Luke to give his former girlfriend a chance to reconcile with him.",
+                "lozengeText": null,
+                "image": {
+                  "name": "Gilmore Girls - 19. Emily In Wonderland",
+                  "altTag": "Gilmore Girls Season 1 Episode 19",
+                  "url": "https://imagemap.swm.digital/image/GILG01-019",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "contentLink": {
+                  "url": "/gilmore-girls?episode-id=GILG01-019&autoplay=true",
+                  "type": "navigationItem"
+                },
+                "expiresOn": null,
+                "duration": "41m",
+                "seriesBackgroundImage": {
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107348/gilg_16_9-background-image.jpg",
+                  "type": "image",
+                  "id": "579060",
+                  "cName": "gilg-16-9-background-image"
+                },
+                "seriesLogo": {
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107351/gilg_show-logo.png",
+                  "type": "image",
+                  "id": "579063",
+                  "cName": "gilg-show-logo"
+                },
+                "productionYear": "2000",
+                "type": "EpisodeCard"
+              },
+              "active": false,
+              "catalogueNumber": "GILG01-019",
+              "type": "EpisodeContainer"
+            }, {
+              "infoPanelData": {
+                "title": "Gilmore Girls",
+                "lozengeText": "",
+                "subtitle": "S1 E20 - P.S. I Lo...",
+                "shortSynopsis": "Rory, upset over Dean, gets angry at Lorelai for not mentioning Max. Dean tells Lorelai he left because Rory couldn't say \"I love you,\" prompting Lorelai to encourage Rory to express her feelings.",
+                "genre": ["DRAMA"],
+                "classification": "PG",
+                "isClosedCaption": true,
+                "airDate": null,
+                "expiresOn": null,
+                "duration": null,
+                "seriesLogo": {
+                  "name": "Gilmore Girls",
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107345/gilg_1_1-shelf-image.jpg",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "buttonPanel": null,
+                "type": "EpisodeInfoPanel"
+              },
+              "playerData": {
+                "title": "S1 E20 - P.S. I Lo...",
+                "videoMetadata": null,
+                "videoUrl": "https://videoservice.swm.digital/playback?appId=7plus&deviceType=web&platformType=web&ppId={ppId}&deviceId=[deviceId]&pc=[postcode]&advertid=[advertid]&accountId=5303576322001&referenceId=ref:GILG01-020&deliveryId={deliveryId}&videoType=vod&showId=GILG",
+                "videoType": "vod",
+                "episodePlayerId": "GILG01-020",
+                "image": {
+                  "name": "Gilmore Girls - S1 E20 - P.S. I Lo...",
+                  "altTag": "Gilmore Girls Season 1 Episode 20",
+                  "url": "https://imagemap.swm.digital/image/GILG01-020",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "analytics": {
+                  "seriesTitle": "Gilmore Girls"
+                },
+                "dialogBox": {
+                  "text": "This show is available with a profile",
+                  "buttonText": "Continue",
+                  "contentLink": {
+                    "url": "/{path}?overlay=sign-in",
+                    "type": "navigationItem"
+                  }
+                },
+                "restricted": true,
+                "type": "EpisodePlayer"
+              },
+              "cardData": {
+                "title": "20. P.S. I Lo...",
+                "subtitle": null,
+                "synopsis": "Rory, upset over Dean, gets angry at Lorelai for not mentioning Max. Dean tells Lorelai he left because Rory couldn't say \"I love you,\" prompting Lorelai to encourage Rory to express her feelings.",
+                "lozengeText": null,
+                "image": {
+                  "name": "Gilmore Girls - 20. P.S. I Lo...",
+                  "altTag": "Gilmore Girls Season 1 Episode 20",
+                  "url": "https://imagemap.swm.digital/image/GILG01-020",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "contentLink": {
+                  "url": "/gilmore-girls?episode-id=GILG01-020&autoplay=true",
+                  "type": "navigationItem"
+                },
+                "expiresOn": null,
+                "duration": "42m",
+                "seriesBackgroundImage": {
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107348/gilg_16_9-background-image.jpg",
+                  "type": "image",
+                  "id": "579060",
+                  "cName": "gilg-16-9-background-image"
+                },
+                "seriesLogo": {
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107351/gilg_show-logo.png",
+                  "type": "image",
+                  "id": "579063",
+                  "cName": "gilg-show-logo"
+                },
+                "productionYear": "2000",
+                "type": "EpisodeCard"
+              },
+              "active": false,
+              "catalogueNumber": "GILG01-020",
+              "type": "EpisodeContainer"
+            }, {
+              "infoPanelData": {
+                "title": "Gilmore Girls",
+                "lozengeText": "",
+                "subtitle": "S1 E21 - Love, Daisies & Troubadours",
+                "shortSynopsis": "Rory tells Dean she loves him. Rachel leaves, sensing Lorelai and Luke's attraction. Max proposes to Lorelai, who rebuffs him. The next day, Max proposes again with daisies, and Lorelai considers it.",
+                "genre": ["DRAMA"],
+                "classification": "PG",
+                "isClosedCaption": true,
+                "airDate": null,
+                "expiresOn": null,
+                "duration": null,
+                "seriesLogo": {
+                  "name": "Gilmore Girls",
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107345/gilg_1_1-shelf-image.jpg",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "buttonPanel": null,
+                "type": "EpisodeInfoPanel"
+              },
+              "playerData": {
+                "title": "S1 E21 - Love, Daisies & Troubadours",
+                "videoMetadata": null,
+                "videoUrl": "https://videoservice.swm.digital/playback?appId=7plus&deviceType=web&platformType=web&ppId={ppId}&deviceId=[deviceId]&pc=[postcode]&advertid=[advertid]&accountId=5303576322001&referenceId=ref:GILG01-021&deliveryId={deliveryId}&videoType=vod&showId=GILG",
+                "videoType": "vod",
+                "episodePlayerId": "GILG01-021",
+                "image": {
+                  "name": "Gilmore Girls - S1 E21 - Love, Daisies & Troubadours",
+                  "altTag": "Gilmore Girls Season 1 Episode 21",
+                  "url": "https://imagemap.swm.digital/image/GILG01-021",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "analytics": {
+                  "seriesTitle": "Gilmore Girls"
+                },
+                "dialogBox": {
+                  "text": "This show is available with a profile",
+                  "buttonText": "Continue",
+                  "contentLink": {
+                    "url": "/{path}?overlay=sign-in",
+                    "type": "navigationItem"
+                  }
+                },
+                "restricted": true,
+                "type": "EpisodePlayer"
+              },
+              "cardData": {
+                "title": "21. Love, Daisies & Troubadours",
+                "subtitle": null,
+                "synopsis": "Rory tells Dean she loves him. Rachel leaves, sensing Lorelai and Luke's attraction. Max proposes to Lorelai, who rebuffs him. The next day, Max proposes again with daisies, and Lorelai considers it.",
+                "lozengeText": null,
+                "image": {
+                  "name": "Gilmore Girls - 21. Love, Daisies & Troubadours",
+                  "altTag": "Gilmore Girls Season 1 Episode 21",
+                  "url": "https://imagemap.swm.digital/image/GILG01-021",
+                  "imageFallback": false,
+                  "type": "image"
+                },
+                "contentLink": {
+                  "url": "/gilmore-girls?episode-id=GILG01-021&autoplay=true",
+                  "type": "navigationItem"
+                },
+                "expiresOn": null,
+                "duration": "42m",
+                "seriesBackgroundImage": {
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107348/gilg_16_9-background-image.jpg",
+                  "type": "image",
+                  "id": "579060",
+                  "cName": "gilg-16-9-background-image"
+                },
+                "seriesLogo": {
+                  "altTag": "Gilmore Girls",
+                  "url": "https://production-mediacms-utility-hsyp63r9v13b.s3-ap-southeast-2.amazonaws.com/media/107351/gilg_show-logo.png",
+                  "type": "image",
+                  "id": "579063",
+                  "cName": "gilg-show-logo"
+                },
+                "productionYear": "2000",
+                "type": "EpisodeCard"
+              },
+              "active": false,
+              "catalogueNumber": "GILG01-021",
+              "type": "EpisodeContainer"
+            }],
+            "source": {
+              "url": "https://component.swm.digital/v2/component/gilmore-girls?component-id=104662-GILG01&platform-id=Web&market-id=4&platform-version=1.0.100878.0&api-version=4.9.0.0&signedUp=False",
+              "authorise": false,
+              "validFor": null
+            },
+            "childType": "EpisodeContainer",
+            "type": "mediaShelf",
+            "id": "104662-GILG01"
+          }],
+          "active": true,
+          "type": "tab",
+          "id": "104662-GILG01-tab"
+        }],
+        "type": "shelfContainer",
+        "id": "104662"
+      }],
+      "active": false,
+      "type": "tab",
+      "id": "104658",
+      "cName": "Episodes"
+    }, {
+      "title": "About",
+      "link": null,
+      "items": [{
+        "content": "<h1>Gilmore Girls</h1>\n\n<p></h2>\n\n<p>In Stars Hollow, Connecticut, Lorelai Gilmore and her teenage daughter, Rory, navigate life, love, and the echoes of Lorelai's rebellious youth.</p>\n\n<hr />\n\n<p></p>\n\n<p> <strong>Years:</strong>  2000-2007 </p>\n\n<p> <strong>Cast:</strong>  Lauren Graham, Alexis Bledel, Melissa McCarthy, Keiko Agena, Yanic Truesdale, Scott Patterson </p>\n\n<p> <strong>Genre:</strong>  Drama </p>\n\n<p> </p>\n\n<p></p>",
+        "markdownData": "# Gilmore Girls\r\n\r\n----------\r\nIn Stars Hollow, Connecticut, Lorelai Gilmore and her teenage daughter, Rory, navigate life, love, and the echoes of Lorelai's rebellious youth.\r\n\r\n----------\r\n\r\n\r\n **Years:**  2000-2007 \r\n\r\n **Cast:**  Lauren Graham, Alexis Bledel, Melissa McCarthy, Keiko Agena, Yanic Truesdale, Scott Patterson \r\n\r\n **Genre:**  Drama \r\n\r\n \r\n\r\n",
+        "title": "About",
+        "theme": "About",
+        "heading": "",
+        "type": "markdownPanel",
+        "id": "104665",
+        "cName": "About"
+      }],
+      "active": false,
+      "type": "tab",
+      "id": "104660",
+      "cName": "About"
+    }],
+    "type": "shelfContainer",
+    "id": "104657",
+    "cName": "Shelf Container"
+  }, {
+    "title": "More Like This",
+    "description": "",
+    "layout": "Grid Layout",
+    "mediaItems": null,
+    "source": {
+      "url": "https://component.swm.digital/v2/component/gilmore-girls?component-id=364394&platform-id=Web&market-id=4&platform-version=1.0.100878.0&api-version=4.9.0.0&signedUp=False&ChildType=SeriesCard",
+      "authorise": false,
+      "validFor": null
+    },
+    "childType": "SeriesCard",
+    "contentLinks": [],
+    "type": "mediaShelf",
+    "id": "364394",
+    "cName": "More Like This"
+  }],
+  "footer": {
+    "items": [{
+      "groupName": "Default",
+      "items": [{
+        "name": "FAQS",
+        "newWindow": true,
+        "title": null,
+        "active": false,
+        "isComponent": false,
+        "items": null,
+        "url": "https://support.7plus.com.au",
+        "pageType": "ExternalLink",
+        "type": "navigationItem",
+        "id": "471587800",
+        "cName": "FAQS"
+      }, {
+        "name": "T&Cs",
+        "newWindow": true,
+        "title": null,
+        "active": false,
+        "isComponent": false,
+        "items": null,
+        "url": "https://support.7plus.com.au/hc/en-au/articles/360060194292-Terms-and-Conditions",
+        "pageType": "ExternalLink",
+        "type": "navigationItem",
+        "id": "471587800",
+        "cName": "T&Cs"
+      }, {
+        "name": "PRIVACY POLICY",
+        "newWindow": true,
+        "title": null,
+        "active": false,
+        "isComponent": false,
+        "items": null,
+        "url": "https://support.7plus.com.au/hc/en-au/articles/360060194392-Privacy-Policy",
+        "pageType": "ExternalLink",
+        "type": "navigationItem",
+        "id": "471587800",
+        "cName": "PRIVACY POLICY"
+      }, {
+        "name": "CONTACT US",
+        "newWindow": true,
+        "title": null,
+        "active": false,
+        "isComponent": false,
+        "items": null,
+        "url": "https://support.7plus.com.au/hc/en-au/requests/new",
+        "pageType": "ExternalLink",
+        "type": "navigationItem",
+        "id": "471587800",
+        "cName": "CONTACT US"
+      }, {
+        "name": "WHERE TO WATCH",
+        "newWindow": true,
+        "title": null,
+        "active": false,
+        "isComponent": false,
+        "items": null,
+        "url": "https://support.7plus.com.au/hc/en-au/articles/360061267271-Which-devices-can-I-watch-7plus-on",
+        "pageType": "ExternalLink",
+        "type": "navigationItem",
+        "id": "471587800",
+        "cName": "WHERE TO WATCH"
+      }, {
+        "name": "CONNECT YOUR TV",
+        "newWindow": true,
+        "title": null,
+        "active": false,
+        "isComponent": false,
+        "items": null,
+        "url": "https://7plus.com.au/connect",
+        "pageType": "ExternalLink",
+        "type": "navigationItem",
+        "id": "471587800",
+        "cName": "CONNECT YOUR TV"
+      }, {
+        "name": "7NEWS",
+        "newWindow": true,
+        "title": null,
+        "active": false,
+        "isComponent": false,
+        "items": null,
+        "url": "https://7news.com.au/?utm_source=7plus&utm_medium=footer&utm_campaign=7news",
+        "pageType": "ExternalLink",
+        "type": "navigationItem",
+        "id": "471587800",
+        "cName": "7NEWS"
+      }, {
+        "name": "TV GUIDE",
+        "newWindow": true,
+        "title": null,
+        "active": false,
+        "isComponent": false,
+        "items": null,
+        "url": "https://tvguidetonight.com.au/?utm_source=7plus&utm_medium=footer&utm_campaign=tv-guide",
+        "pageType": "ExternalLink",
+        "type": "navigationItem",
+        "id": "471587800",
+        "cName": "TV GUIDE"
+      }, {
+        "name": "© 2025 Seven Network (Operations) Limited",
+        "newWindow": false,
+        "title": null,
+        "active": false,
+        "isComponent": false,
+        "items": null,
+        "url": "#",
+        "pageType": "InternalLink",
+        "type": "navigationItem",
+        "id": "471587800",
+        "cName": "© 2025 Seven Network (Operations) Limited"
+      }]
+    }],
+    "type": "footer",
+    "id": "987059828",
+    "cName": "footer"
+  },
+  "type": "listingPage",
+  "id": "104650",
+  "cName": "vod-page"
+}
+
+--------------------------------------------------------------------------------
+
+https://apis.support.brightcove.com/playback/references/reference_v2.html#tag/Videos/operation/Get_Video_by_ID_or_Reference_ID
+https://edge.api.brightcove.com/playback/v1/accounts/{{account_id}}/videos/ref:{reference_id}
+
+test video (S01E01):
+====================
+
+policy_key='BCpkADawqM33sxTxTSkUGuTlYrSr1IWKvoedldJ6w01PbfYMPMDR2OSumoyEdKusPv2UC6g_bidqbcAkLzVwSOgD1Yea5O3V0Wu35n2lWGq1FmNDHB4dhwcTqJ7Z3GNoI-mfkmi6xMpLPBAN'
+account_id='5303576322001'
+reference_id='GILG01-001'
+
+curl --insecure \
+  -H "Referer: https://7plus.com.au/gilmore-girls" \
+  -H "BCOV-POLICY: ${policy_key}" \
+  "https://edge.api.brightcove.com/playback/v1/accounts/${account_id}/videos/ref:${reference_id}"
+
+--------------------------------------------------------------------------------
+
+test #1:
+========
+
+curl -s -o "./data/1_curl_response.txt" --insecure -H "Referer: https://7plus.com.au/gilmore-girls" -H "BCOV-POLICY: BCpkADawqM33sxTxTSkUGuTlYrSr1IWKvoedldJ6w01PbfYMPMDR2OSumoyEdKusPv2UC6g_bidqbcAkLzVwSOgD1Yea5O3V0Wu35n2lWGq1FmNDHB4dhwcTqJ7Z3GNoI-mfkmi6xMpLPBAN" "https://edge.api.brightcove.com/playback/v1/accounts/5303576322001/videos/ref:GILG01-001"
+
+200 OK
+
+--------------------------------------------------------------------------------
+
+test #2:
+========
+
+test Dash .mpd manifest URL in curl response:
+
+curl -s -o "./data/2_dash_manifest.mpd" --insecure -H "Referer: https://7plus.com.au/gilmore-girls" "https://manifest.prod.boltdns.net/manifest/v2/dash/live-baseurl/bccenc/avc1_mp4a/5303576322001/f6daf5b4-5034-491c-b404-ddc98aa91195/2s/manifest.mpd?fastly_token=Njc5ZmExYjhfMzBlNjQ1MTZlNzUyNTNjMGVkODU1M2VjMjNiYTYzOTBjNTQ0NTZmNzIwNTc5MzJmNTE3Zjc1N2ViYjEwZmVkYQ%3D%3D"
+
+200 OK
+
+--------------------------------------------------------------------------------
+
+test #3:
+========
+
+with VPN on device running ExoAirPlayer (receiver app):
+
+http://webcast-reloaded.frii.site/airplay_sender.html
+  video      = https://manifest.prod.boltdns.net/manifest/v2/dash/live-baseurl/bccenc/avc1_mp4a/5303576322001/f6daf5b4-5034-491c-b404-ddc98aa91195/2s/manifest.mpd?fastly_token=Njc5ZmExYjhfMzBlNjQ1MTZlNzUyNTNjMGVkODU1M2VjMjNiYTYzOTBjNTQ0NTZmNzIwNTc5MzJmNTE3Zjc1N2ViYjEwZmVkYQ%3D%3D
+  caption    = https://7plus-sevennetwork.akamaized.net/media/v1/text/vtt/clear/5303576322001/f6daf5b4-5034-491c-b404-ddc98aa91195/2f72f4cc-8b79-4395-9074-a80f61f011ec/text.vtt?akamai_token=exp=1738514872~acl=/media/v1/text/vtt/clear/5303576322001/f6daf5b4-5034-491c-b404-ddc98aa91195/2f72f4cc-8b79-4395-9074-a80f61f011ec/text.vtt*~hmac=2ed55d70c74a9566d4c8b1893f08d6ab22df683a173ff0baeb9e27fa0b9adfe4
+  referer    = https://7plus.com.au/gilmore-girls
+  DRM scheme = Widevine
+  DRM URL    = https://manifest.prod.boltdns.net/license/v1/cenc/widevine/5303576322001/f6daf5b4-5034-491c-b404-ddc98aa91195/fa554180-ed96-4295-86eb-7ef530274bd3?fastly_token=Njc5ZmExYjhfNmIwZDFhOTA5MmU5NjAxYzM5NjEzZWZlYTFiOGRmNjgyMzlhMzAxZTEwYzdiNTExOGFjYThiYzc5ODQ1ZmZmYg%3D%3D
+
+successfully plays video!
+
+--------------------------------------------------------------------------------

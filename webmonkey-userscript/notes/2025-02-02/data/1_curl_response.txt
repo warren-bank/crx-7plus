@@ -1,0 +1,190 @@
+{
+  "poster": "https://cf-images.ap-southeast-2.prod.boltdns.net/v1/jit/5303576322001/f6daf5b4-5034-491c-b404-ddc98aa91195/main/1920x1080/21m14s677ms/match/image.jpg",
+  "thumbnail": "https://cf-images.ap-southeast-2.prod.boltdns.net/v1/jit/5303576322001/f6daf5b4-5034-491c-b404-ddc98aa91195/main/256x144/21m14s677ms/match/image.jpg",
+  "poster_sources": [{
+    "src": "https://cf-images.ap-southeast-2.prod.boltdns.net/v1/jit/5303576322001/f6daf5b4-5034-491c-b404-ddc98aa91195/main/1920x1080/21m14s677ms/match/image.jpg"
+  }],
+  "thumbnail_sources": [{
+    "src": "https://cf-images.ap-southeast-2.prod.boltdns.net/v1/jit/5303576322001/f6daf5b4-5034-491c-b404-ddc98aa91195/main/256x144/21m14s677ms/match/image.jpg"
+  }],
+  "description": null,
+  "tags": [],
+  "cue_points": [{
+    "id": "0915987534603",
+    "name": "introstart",
+    "type": "CODE",
+    "time": 194.32,
+    "metadata": null,
+    "force_stop": false
+  }, {
+    "id": "8903086255260",
+    "name": "introend",
+    "type": "CODE",
+    "time": 244.84,
+    "metadata": null,
+    "force_stop": false
+  }, {
+    "id": "8300599827508",
+    "name": "ad_1",
+    "type": "AD",
+    "time": 246.2,
+    "metadata": null,
+    "force_stop": false
+  }, {
+    "id": "5847240731209",
+    "name": "ad_2",
+    "type": "AD",
+    "time": 867.76,
+    "metadata": null,
+    "force_stop": false
+  }, {
+    "id": "4807250440248",
+    "name": "ad_3",
+    "type": "AD",
+    "time": 1298.76,
+    "metadata": null,
+    "force_stop": false
+  }, {
+    "id": "8456229519389",
+    "name": "ad_4",
+    "type": "AD",
+    "time": 1893.92,
+    "metadata": null,
+    "force_stop": false
+  }, {
+    "id": "1924400045872",
+    "name": "ad_5",
+    "type": "AD",
+    "time": 2334.36,
+    "metadata": null,
+    "force_stop": false
+  }, {
+    "id": "7562999000403",
+    "name": "credits",
+    "type": "CODE",
+    "time": 2505.2,
+    "metadata": null,
+    "force_stop": false
+  }],
+  "custom_fields": {
+    "content_classification": "PG",
+    "content_showname": "Gilmore Girls",
+    "content_type": "Episode",
+    "content_year": "2000",
+    "invineo_version": "GILG01-001-001MA1",
+    "invineo_versionid": "GILG01-001-001MA1",
+    "metadata_type": "csv",
+    "source_cuepoints": "8",
+    "source_extension": "mxf",
+    "source_provider": "bcm-manual",
+    "video_type": "vod"
+  },
+  "account_id": "5303576322001",
+  "sources": [{
+    "ext_x_version": "5",
+    "key_systems": {
+      "com.apple.fps.1_0": {
+        "certificate_url": "https://manifest.prod.boltdns.net/license/v1/fairplay_app_cert/5303576322001",
+        "key_request_url": "https://manifest.prod.boltdns.net/license/v1/fairplay/5303576322001/f6daf5b4-5034-491c-b404-ddc98aa91195/467e438b-39e4-4e7f-9dd8-cf9a489c46a2?fastly_token=Njc5ZmExYjhfYjE5MmVkOTc1YmFiODk4ZmY0ZmUzOTRlZWM1ZDFiNDQwZmFlN2IzODlmNmQ4YjQxOTBhZTI3ZTZjZjE2ZGUyMg%3D%3D"
+      }
+    },
+    "src": "https://manifest.prod.boltdns.net/manifest/v1/hls/v5/fairplay/5303576322001/f6daf5b4-5034-491c-b404-ddc98aa91195/10s/master.m3u8?fastly_token=Njc5ZmExYjhfNTVmOWRiMmYxMGQxOWUyNGJlOWZhZjQ5YzRkOGEwMmM1ZTQwNGQ3NTU0NDY4NjliZTIwYzJkMmU0NGM3OTViMQ%3D%3D",
+    "type": "application/x-mpegURL"
+  }, {
+    "codecs": "avc1,mp4a",
+    "ext_x_version": "7",
+    "key_systems": {
+      "com.apple.fps.1_0": {
+        "certificate_url": "https://manifest.prod.boltdns.net/license/v1/fairplay_app_cert/5303576322001",
+        "key_request_url": "https://manifest.prod.boltdns.net/license/v1/fairplay/5303576322001/f6daf5b4-5034-491c-b404-ddc98aa91195/467e438b-39e4-4e7f-9dd8-cf9a489c46a2?fastly_token=Njc5ZmExYjhfYjE5MmVkOTc1YmFiODk4ZmY0ZmUzOTRlZWM1ZDFiNDQwZmFlN2IzODlmNmQ4YjQxOTBhZTI3ZTZjZjE2ZGUyMg%3D%3D"
+      }
+    },
+    "src": "https://manifest.prod.boltdns.net/manifest/v2/hls/v7/fairplay/avc1_mp4a/5303576322001/f6daf5b4-5034-491c-b404-ddc98aa91195/10s/master.m3u8?fastly_token=Njc5ZmExYjhfMmUxYmNjZmUwNWE4MWE5NzA2MGNkZmNjYTg2ZjlmYzliOTVjMzJhNzRjYzUxNThmNDU4YmZhMmNmZDc2MTJhMg%3D%3D",
+    "type": "application/x-mpegURL"
+  }, {
+    "key_systems": {
+      "com.microsoft.playready": {
+        "license_url": "https://manifest.prod.boltdns.net/license/v1/cenc/playready/5303576322001/f6daf5b4-5034-491c-b404-ddc98aa91195/fa554180-ed96-4295-86eb-7ef530274bd3?fastly_token=Njc5ZmExYjhfZTg3NjBiMWIwMzc3MDA5NGY5NDhlOGNiNDYzYmI1OWU5Yzk2OGZmNDAzMTI4NjEyNzM0NmFjZTA5MTY2NWEzMw%3D%3D"
+      },
+      "com.widevine.alpha": {
+        "license_url": "https://manifest.prod.boltdns.net/license/v1/cenc/widevine/5303576322001/f6daf5b4-5034-491c-b404-ddc98aa91195/fa554180-ed96-4295-86eb-7ef530274bd3?fastly_token=Njc5ZmExYjhfNmIwZDFhOTA5MmU5NjAxYzM5NjEzZWZlYTFiOGRmNjgyMzlhMzAxZTEwYzdiNTExOGFjYThiYzc5ODQ1ZmZmYg%3D%3D"
+      }
+    },
+    "profiles": "urn:mpeg:dash:profile:isoff-live:2011",
+    "src": "https://manifest.prod.boltdns.net/manifest/v1/dash/live-baseurl/bccenc/5303576322001/f6daf5b4-5034-491c-b404-ddc98aa91195/2s/manifest.mpd?fastly_token=Njc5ZmExYjhfNDNlOTY1MWM2Y2MxZmIyMzU3ZGU0MTlhOGFjN2MxMTE5NzMzZmIzMGMwNmFlNzgwZjllMTdiOThjNTAxZTE3Nw%3D%3D",
+    "type": "application/dash+xml"
+  }, {
+    "codecs": "avc1,mp4a",
+    "key_systems": {
+      "com.microsoft.playready": {
+        "license_url": "https://manifest.prod.boltdns.net/license/v1/cenc/playready/5303576322001/f6daf5b4-5034-491c-b404-ddc98aa91195/fa554180-ed96-4295-86eb-7ef530274bd3?fastly_token=Njc5ZmExYjhfZTg3NjBiMWIwMzc3MDA5NGY5NDhlOGNiNDYzYmI1OWU5Yzk2OGZmNDAzMTI4NjEyNzM0NmFjZTA5MTY2NWEzMw%3D%3D"
+      },
+      "com.widevine.alpha": {
+        "license_url": "https://manifest.prod.boltdns.net/license/v1/cenc/widevine/5303576322001/f6daf5b4-5034-491c-b404-ddc98aa91195/fa554180-ed96-4295-86eb-7ef530274bd3?fastly_token=Njc5ZmExYjhfNmIwZDFhOTA5MmU5NjAxYzM5NjEzZWZlYTFiOGRmNjgyMzlhMzAxZTEwYzdiNTExOGFjYThiYzc5ODQ1ZmZmYg%3D%3D"
+      }
+    },
+    "profiles": "urn:mpeg:dash:profile:isoff-live:2011",
+    "src": "https://manifest.prod.boltdns.net/manifest/v2/dash/live-baseurl/bccenc/avc1_mp4a/5303576322001/f6daf5b4-5034-491c-b404-ddc98aa91195/2s/manifest.mpd?fastly_token=Njc5ZmExYjhfMzBlNjQ1MTZlNzUyNTNjMGVkODU1M2VjMjNiYTYzOTBjNTQ0NTZmNzIwNTc5MzJmNTE3Zjc1N2ViYjEwZmVkYQ%3D%3D",
+    "type": "application/dash+xml"
+  }, {
+    "key_systems": {
+      "com.microsoft.playready": {
+        "license_url": "https://manifest.prod.boltdns.net/license/v1/playready/5303576322001/f6daf5b4-5034-491c-b404-ddc98aa91195/70e25330-0aa8-4741-b144-7291fe35084e?fastly_token=Njc5ZmExYjhfYTVkMjQ4YmQzOTc2NWI4MDVmMTJmYjYxMDc5ZWQxNzhiZTM0OWU2NTM5OWYyZGFmYWNkNjJiYTIzYmFkYzQ2Nw%3D%3D"
+      }
+    },
+    "profiles": "urn:hbbtv:dash:profile:isoff-live:2012,urn:mpeg:dash:profile:isoff-live:2011",
+    "src": "https://manifest.prod.boltdns.net/manifest/v1/dash/live-hbbtv15/playready/5303576322001/f6daf5b4-5034-491c-b404-ddc98aa91195/2s/manifest.mpd?fastly_token=Njc5ZmExYjhfYjNiZDFhMzYzNGVmOTAwZWQyNmVhNTk4Yjk2ZjAxMmNjMWVlYzE4NWM0ZGExY2IzODczMzRmMzFmNTE5MzUzMA%3D%3D",
+    "type": "application/dash+xml"
+  }, {
+    "codecs": "avc1,mp4a",
+    "key_systems": {
+      "com.microsoft.playready": {
+        "license_url": "https://manifest.prod.boltdns.net/license/v1/playready/5303576322001/f6daf5b4-5034-491c-b404-ddc98aa91195/70e25330-0aa8-4741-b144-7291fe35084e?fastly_token=Njc5ZmExYjhfYTVkMjQ4YmQzOTc2NWI4MDVmMTJmYjYxMDc5ZWQxNzhiZTM0OWU2NTM5OWYyZGFmYWNkNjJiYTIzYmFkYzQ2Nw%3D%3D"
+      }
+    },
+    "profiles": "urn:hbbtv:dash:profile:isoff-live:2012,urn:mpeg:dash:profile:isoff-live:2011",
+    "src": "https://manifest.prod.boltdns.net/manifest/v2/dash/live-hbbtv15/playready/avc1_mp4a/5303576322001/f6daf5b4-5034-491c-b404-ddc98aa91195/2s/manifest.mpd?fastly_token=Njc5ZmExYjhfNGIwN2M5MDdiZmJjMDI4OTVlYTMwNmJjYTFhZmVkZWE3MWFiZTFjMDZiMGFkMjMyNDZkODI0ODNjYmM0ZmQyZA%3D%3D",
+    "type": "application/dash+xml"
+  }],
+  "name": "Pilot",
+  "reference_id": "GILG01-001",
+  "long_description": null,
+  "duration": 2549355,
+  "economics": "AD_SUPPORTED",
+  "text_tracks": [{
+    "id": "2f72f4cc-8b79-4395-9074-a80f61f011ec",
+    "account_id": "5303576322001",
+    "src": "https://7plus-sevennetwork.akamaized.net/media/v1/text/vtt/clear/5303576322001/f6daf5b4-5034-491c-b404-ddc98aa91195/2f72f4cc-8b79-4395-9074-a80f61f011ec/text.vtt?akamai_token=exp=1738514872~acl=/media/v1/text/vtt/clear/5303576322001/f6daf5b4-5034-491c-b404-ddc98aa91195/2f72f4cc-8b79-4395-9074-a80f61f011ec/text.vtt*~hmac=2ed55d70c74a9566d4c8b1893f08d6ab22df683a173ff0baeb9e27fa0b9adfe4",
+    "srclang": "en",
+    "label": "EN",
+    "kind": "captions",
+    "mime_type": "text/webvtt",
+    "asset_id": null,
+    "sources": [{
+      "src": "https://7plus-sevennetwork.akamaized.net/media/v1/text/vtt/clear/5303576322001/f6daf5b4-5034-491c-b404-ddc98aa91195/2f72f4cc-8b79-4395-9074-a80f61f011ec/text.vtt?akamai_token=exp=1738514872~acl=/media/v1/text/vtt/clear/5303576322001/f6daf5b4-5034-491c-b404-ddc98aa91195/2f72f4cc-8b79-4395-9074-a80f61f011ec/text.vtt*~hmac=2ed55d70c74a9566d4c8b1893f08d6ab22df683a173ff0baeb9e27fa0b9adfe4"
+    }],
+    "in_band_metadata_track_dispatch_type": "",
+    "default": true
+  }, {
+    "id": null,
+    "account_id": "5303576322001",
+    "src": "https://manifest.prod.boltdns.net/thumbnail/v1/5303576322001/f6daf5b4-5034-491c-b404-ddc98aa91195/87c6dd1f-9460-4080-85a8-b8de236287cd/thumbnail.webvtt?fastly_token=Njc5ZmExYjhfYWM5ZTVjZGZmZGJlMzI2ODE5OWFiNmNhODhkYTFhM2NlMWVlMWRmMzU0MDI3Njc0YmRlNGFlOTY0MzMxZjY2ZQ%3D%3D",
+    "srclang": null,
+    "label": "thumbnails",
+    "kind": "metadata",
+    "mime_type": "text/webvtt",
+    "asset_id": null,
+    "sources": null,
+    "default": false,
+    "width": 320,
+    "height": 180,
+    "bandwidth": 422
+  }],
+  "published_at": "2025-01-13T09:32:42.704Z",
+  "created_at": "2025-01-13T09:32:42.710Z",
+  "updated_at": "2025-01-31T13:04:39.457Z",
+  "offline_enabled": false,
+  "link": null,
+  "id": "6367018951112",
+  "ad_keys": null
+}
