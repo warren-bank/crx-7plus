@@ -15,12 +15,20 @@ Its purpose is to:
 
 #### Notes:
 
-* the data API endoint can be accessed from anywhere to obtain the URL for video streams
-  - login is _not_ required
-* the URL for video streams can only be accessed from within Australia
-  - a VPN is required to watch the stream from elsewhere
-  - login is _not_ required
-  - _Referer_ request header is _not_ required
+* video on demand (VOD)&hellip; movies, and episodes in tv series:
+  - the data API endoint can be accessed from anywhere to obtain the URL for video streams
+    * login is _not_ required
+  - the URL for video streams can only be accessed from within Australia
+    * a VPN is required to watch the stream from elsewhere
+    * login is _not_ required
+    * _Referer_ request header is _not_ required
+* live tv channels:
+  - the data API endoint can be accessed from anywhere to obtain the URL for video streams
+    * login __is__ required
+  - the URL for video streams can only be accessed from within Australia
+    * a VPN is required to watch the stream from elsewhere
+    * login is _not_ required
+    * _Referer_ request header is _not_ required
 
 #### Legal:
 

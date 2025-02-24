@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         7plus
 // @description  Improve site usability. Watch videos in external player.
-// @version      1.0.0
+// @version      2.0.0
 // @match        *://*.7plus.com.au/*
 // @icon         https://7plus.com.au/favicon.ico
 // @run-at       document-end
@@ -37,6 +37,8 @@ var user_options = {
 
 var constants = {
   "button_attributes": {
+    "player_url":                   "x-player-url",
+
     "reference_id":                 "x-reference-id",
     "video_url":                    "x-video-url",
     "video_type":                   "x-video-type",
@@ -53,7 +55,6 @@ var constants = {
 var strings = {
   "button_download_video":          "Get Video URL",
   "button_start_video":             "Start Video",
-  "button_unavailable_video":       "Video Is Not Available",
   "episode_labels": {
     "title":                        "title:",
     "summary":                      "summary:",
@@ -63,6 +64,19 @@ var strings = {
       "format":                     "format:",
       "drm":                        "drm:"
     }
+  },
+  "livetv_epg_toggle_button": {
+    "show":                         "Show",
+    "hide":                         "Hide"
+  },
+  "livetv_channel_labels": {
+    "epg": {
+      "series_title":               "Series Title:",
+      "episode_title":              "Episode Title:",
+      "episode_summary":            "Summary:",
+      "duration_date_range":        "Time:",
+      "duration":                   "Duration:"
+    }
   }
 }
 
@@ -71,8 +85,14 @@ var strings = {
 var state = {
   policy_key: null,
   account_id: null,
-  series:     null, // {title, summary}
-  episodes:   null  // [{reference_id, title, summary, duration, expires}]
+
+  series:     {}, // {title, summary}
+  episodes:   [], // [{reference_id, title, summary, duration, expires}]
+  current_episode_index: -1,
+
+  id_token: null,
+  livetv_channels: [], // [{name, player_url, epg: [{series_title, episode_title, episode_summary, duration_date_range, duration}]}]
+  current_livetv_channel_index: -1
 }
 
 // ----------------------------------------------------------------------------- CSP
@@ -140,7 +160,7 @@ var serialize_xhr_body_object = function(data) {
   return body
 }
 
-var download_text = function(url, headers, data, callback) {
+var download_text = function(url, headers, data, withCredentials, callback) {
   if (data) {
     if (!headers)
       headers = {}
@@ -163,6 +183,7 @@ var download_text = function(url, headers, data, callback) {
   var method = data ? 'POST' : 'GET'
 
   xhr.open(method, url, true, null, null)
+  xhr.withCredentials = !!withCredentials
 
   if (headers && (typeof headers === 'object')) {
     var keys = Object.keys(headers)
@@ -176,10 +197,15 @@ var download_text = function(url, headers, data, callback) {
 
   xhr.onload = function(e) {
     if (xhr.readyState === 4) {
-      if (xhr.status === 200) {
-        callback(xhr.responseText)
+      if ((xhr.status >= 200) && (xhr.status < 300)) {
+        callback(null, xhr.responseText)
       }
     }
+    callback(new Error())
+  }
+
+  xhr.onerror = function(e) {
+    callback(new Error())
   }
 
   if (data)
@@ -188,15 +214,18 @@ var download_text = function(url, headers, data, callback) {
     xhr.send()
 }
 
-var download_json = function(url, headers, data, callback) {
+var download_json = function(url, headers, data, withCredentials, callback) {
   if (!headers)
     headers = {}
   if (!headers.accept)
     headers.accept = 'application/json'
 
-  download_text(url, headers, data, function(text){
+  download_text(url, headers, data, withCredentials, function(error, text){
     try {
-      callback(JSON.parse(text))
+      if (error)
+        callback(error)
+      else
+        callback(null, JSON.parse(text))
     }
     catch(e) {}
   })
@@ -261,6 +290,66 @@ var cancel_event = function(event) {
   event.stopPropagation();event.stopImmediatePropagation();event.preventDefault();event.returnValue=false;
 }
 
+// https://stackoverflow.com/a/66696162
+var convertSecondsToReadableString = function(seconds) {
+  seconds = seconds || 0
+  seconds = Number(seconds)
+  seconds = Math.abs(seconds)
+
+  var d = Math.floor(seconds / (3600 * 24))
+  var h = Math.floor(seconds % (3600 * 24) / 3600)
+  var m = Math.floor(seconds % 3600 / 60)
+  var s = Math.floor(seconds % 60)
+  var parts = []
+
+  if (d > 0) {
+    parts.push(d + ' day' + (d > 1 ? 's' : ''))
+  }
+  if (h > 0) {
+    parts.push(h + ' hour' + (h > 1 ? 's' : ''))
+  }
+  if (m > 0) {
+    parts.push(m + ' minute' + (m > 1 ? 's' : ''))
+  }
+  if (s > 0) {
+    parts.push(s + ' second' + (s > 1 ? 's' : ''))
+  }
+  return parts.join(', ')
+}
+
+var convertDateRangeToReadableString = function(start_date, end_date) {
+  start_date = new Date(start_date)
+  end_date   = new Date(end_date)
+
+  var parts = {
+    start_date: start_date.toLocaleDateString(),
+    start_time: start_date.toLocaleTimeString(),
+
+    end_date:   end_date.toLocaleDateString(),
+    end_time:   end_date.toLocaleTimeString()
+  }
+
+  var range = parts.start_date + ' ' + parts.start_time + ' - ' + ((parts.end_date !== parts.start_date) ? (parts.end_date + ' ') : '') + parts.end_time
+  return range
+}
+
+var find_needle = function(data) {
+  var index_start, index_stop
+
+  index_start = data.haystack.indexOf(data.needle)
+  if (index_start >= 0) {
+    index_start += data.needle.length
+    index_stop = data.haystack.indexOf(data.tail, index_start)
+    if ((index_stop === -1) && !data.strict) {
+      index_stop = data.haystack.length
+    }
+    if (index_stop >= index_start) {
+      return data.haystack.substring(index_start, index_stop)
+    }
+  }
+  return null
+}
+
 // ----------------------------------------------------------------------------- URL links to tools on Webcast Reloaded website
 
 var get_webcast_reloaded_url = function(video_data, force_http, force_https) {
@@ -277,7 +366,7 @@ var get_webcast_reloaded_url = function(video_data, force_http, force_https) {
 
   webcast_reloaded_base = {
     "https": "https://warren-bank.github.io/crx-webcast-reloaded/external_website/index.html",
-    "http":  "http://webcast-reloaded.surge.sh/index.html"
+    "http":  "http://webcast-reloaded.frii.site/index.html"
   }
 
   webcast_reloaded_base = (force_http)
@@ -456,7 +545,7 @@ var process_dash_url = function(dash_url, caption_url, referer_url, drm_scheme, 
 
 // ----------------------------------------------------------------------------- API: download series media items
 
-var download_series_media_items = function(callback) {
+var download_series_media_items = function(series_id, episode_id, callback) {
   var $brightcove_script_src
 
   var $inline_scripts = unsafeWindow.document.querySelectorAll('script:not([src])')
@@ -471,13 +560,15 @@ var download_series_media_items = function(callback) {
       state.account_id = find_needle({
         haystack: $inline_script_text,
         needle:   '"account_id":"',
-        tail:     '"'
+        tail:     '"',
+        strict:   true
       })
 
       $brightcove_script_src = find_needle({
         haystack: $inline_script_text,
         needle:   '"brightcoveScript":"',
-        tail:     '"'
+        tail:     '"',
+        strict:   true
       })
     }
   }
@@ -485,28 +576,29 @@ var download_series_media_items = function(callback) {
   debug('account_id: ' + state.account_id)
   if (!state.account_id || !$brightcove_script_src) return
 
-  download_text($brightcove_script_src, null, null, function($brightcove_script_text) {
+  download_text($brightcove_script_src, null, null, false, function(error, $brightcove_script_text) {
+    if (error) return
+
     // contains: ,policyKey:"
 
     state.policy_key = find_needle({
       haystack: $brightcove_script_text,
       needle:   ',policyKey:"',
-      tail:     '"'
+      tail:     '"',
+      strict:   true
     })
 
     debug('policy_key: ' + state.policy_key)
     if (!state.policy_key) return
 
-    var series_id = unsafeWindow.location.pathname
-    if ((series_id.length < 2) || (series_id[0] !== '/')) return
-    series_id = series_id.split('/')[1]
-    debug('series_id: ' + series_id)
-
     download_json(
       /* url= */ 'https://component-cdn.swm.digital/content/' + series_id + '?platform-id=web&market-id=-1&platform-version=1.0.100878&api-version=4.9',
       /* headers= */ null,
       /* data= */ null,
-      function(series_data) {
+      /* withCredentials= */ false,
+      function(error, series_data) {
+        if (error) return
+
         debug('series_data: ' + typeof series_data)
         debug('items: ' + typeof series_data.items + ' (' + (Array.isArray(series_data.items) ? 'array' : 'not array') + ')')
         if (!series_data || (typeof series_data !== 'object') || !Array.isArray(series_data.items) || !series_data.items.length) return
@@ -528,24 +620,19 @@ var download_series_media_items = function(callback) {
         if (user_options.common.sort_newest_first)
           state.episodes.reverse()
 
+        if (episode_id) {
+          for (var i=0; i < state.episodes.length; i++) {
+            if (state.episodes[i].reference_id === episode_id) {
+              state.current_episode_index = i
+              break
+            }
+          }
+        }
+
         callback()
       }
     )
   })
-}
-
-var find_needle = function(data) {
-  var index_start, index_stop
-
-  index_start = data.haystack.indexOf(data.needle)
-  if (index_start >= 0) {
-    index_start += data.needle.length
-    index_stop = data.haystack.indexOf(data.tail, index_start)
-    if (index_stop >= index_start) {
-      return data.haystack.substring(index_start, index_stop)
-    }
-  }
-  return null
 }
 
 var find_series_media_items = function(items) {
@@ -604,90 +691,97 @@ var normalize_series_media_items = function(old_items) {
   })
 }
 
-// ----------------------------------------------------------------------------- API: download video sources
+// ----------------------------------------------------------------------------- API: download video sources for episode in series
 
-var download_video_sources = function(reference_id, callback) {
+var download_episode_video_sources = function(reference_id, callback) {
   download_json(
     /* url= */ 'https://edge.api.brightcove.com/playback/v1/accounts/' + state.account_id + '/videos/ref:' + reference_id,
     /* headers= */ {
       "BCOV-POLICY": state.policy_key
     },
     /* data= */ null,
-    function($brightcove_data) {
-      if (!$brightcove_data || (typeof $brightcove_data !== 'object') || !Array.isArray($brightcove_data.sources) || !$brightcove_data.sources.length) return
+    /* withCredentials= */ false,
+    function(error, api_media_data) {
+      if (error) return
 
-      $brightcove_data.sources = $brightcove_data.sources.filter(function(vidsrc) {
-        return !!(vidsrc && (typeof vidsrc === 'object') && vidsrc.src && vidsrc.type)
-      })
-      if (!$brightcove_data.sources.length) return
-
-      var caption_url
-
-      if (Array.isArray($brightcove_data.text_tracks) && $brightcove_data.text_tracks.length) {
-        $brightcove_data.text_tracks = $brightcove_data.text_tracks.filter(function(txtrack) {
-          return !!(txtrack && (typeof txtrack === 'object') && txtrack.src && (txtrack.kind === 'captions') && (txtrack.mime_type === 'text/webvtt'))
-        })
-
-        if ($brightcove_data.text_tracks.length) {
-          caption_url = $brightcove_data.text_tracks[0].src
-        }
-      }
-
-      var video_sources = []
-      var drm_schemes = ['widevine', 'clearkey', 'playready', 'fairplay']
-      var src, video_data, has_drm, drm_keys, drm_key, drm_data, drm_scheme
-
-      for (var i=0; i < $brightcove_data.sources.length; i++) {
-        src = $brightcove_data.sources[i]
-
-        video_data = {
-          video_url:   src.src,
-          video_type:  src.type,
-          caption_url: caption_url,
-          referer_url: null,
-          drm: {
-            scheme:    null,
-            server:    null,
-            headers:   null
-          }
-        }
-
-        has_drm = false
-
-        if (src.key_systems && (typeof src.key_systems === 'object')) {
-          drm_keys = Object.keys(src.key_systems)
-
-          if (drm_keys.length)
-            has_drm = true
-
-          for (var j=0; j < drm_keys.length; j++) {
-            drm_key  = drm_keys[j]
-            drm_data = src.key_systems[drm_key]
-
-            if (drm_data && (typeof drm_data === 'object') && drm_data.license_url) {
-              drm_scheme = resolve_drm_scheme(drm_schemes, drm_key)
-
-              if (drm_scheme) {
-                video_sources.push(
-                  Object.assign({}, video_data, {drm: {
-                    scheme:  drm_scheme,
-                    server:  drm_data.license_url,
-                    headers: null
-                  }})
-                )
-              }
-            }
-          }
-        }
-
-        if (!has_drm) {
-          video_sources.push(video_data)
-        }
-      }
-
-      callback(video_sources)
+      normalize_api_media_data(api_media_data, callback)
     }
   )
+}
+
+var normalize_api_media_data = function(api_media_data, callback) {
+  if (!api_media_data || (typeof api_media_data !== 'object') || !Array.isArray(api_media_data.sources) || !api_media_data.sources.length) return
+
+  api_media_data.sources = api_media_data.sources.filter(function(vidsrc) {
+    return !!(vidsrc && (typeof vidsrc === 'object') && vidsrc.src && vidsrc.type)
+  })
+  if (!api_media_data.sources.length) return
+
+  var caption_url
+
+  if (Array.isArray(api_media_data.text_tracks) && api_media_data.text_tracks.length) {
+    api_media_data.text_tracks = api_media_data.text_tracks.filter(function(txtrack) {
+      return !!(txtrack && (typeof txtrack === 'object') && txtrack.src && (txtrack.kind === 'captions') && (txtrack.mime_type === 'text/webvtt'))
+    })
+
+    if (api_media_data.text_tracks.length) {
+      caption_url = api_media_data.text_tracks[0].src
+    }
+  }
+
+  var video_sources = []
+  var drm_schemes = ['widevine', 'clearkey', 'playready', 'fairplay']
+  var src, video_data, has_drm, drm_keys, drm_key, drm_data, drm_scheme
+
+  for (var i=0; i < api_media_data.sources.length; i++) {
+    src = api_media_data.sources[i]
+
+    video_data = {
+      video_url:   src.src,
+      video_type:  src.type,
+      caption_url: caption_url,
+      referer_url: null,
+      drm: {
+        scheme:    null,
+        server:    null,
+        headers:   null
+      }
+    }
+
+    has_drm = false
+
+    if (src.key_systems && (typeof src.key_systems === 'object')) {
+      drm_keys = Object.keys(src.key_systems)
+
+      if (drm_keys.length)
+        has_drm = true
+
+      for (var j=0; j < drm_keys.length; j++) {
+        drm_key  = drm_keys[j]
+        drm_data = src.key_systems[drm_key]
+
+        if (drm_data && (typeof drm_data === 'object') && drm_data.license_url) {
+          drm_scheme = resolve_drm_scheme(drm_schemes, drm_key)
+
+          if (drm_scheme) {
+            video_sources.push(
+              Object.assign({}, video_data, {drm: {
+                scheme:  drm_scheme,
+                server:  drm_data.license_url,
+                headers: null
+              }})
+            )
+          }
+        }
+      }
+    }
+
+    if (!has_drm) {
+      video_sources.push(video_data)
+    }
+  }
+
+  callback(video_sources)
 }
 
 var resolve_drm_scheme = function(drm_schemes, drm_key) {
@@ -702,6 +796,188 @@ var resolve_drm_scheme = function(drm_schemes, drm_key) {
   }
 
   return null
+}
+
+// ----------------------------------------------------------------------------- API: download JWT to access live tv channels
+
+var download_id_token = function(callback) {
+  var api_cookie = unsafeWindow.document.cookie.split(';')
+    .map(function(pair) {
+      pair = pair.trim()
+      return (pair.indexOf('glt_') === 0) ? pair : null
+    })
+    .filter(function(pair) {return !!pair})
+    .map(function(pair) {return pair.split('=')})
+    .pop()
+
+  if (!api_cookie) return
+
+  var api_key   = api_cookie[0].substring(4, api_cookie[0].length)
+  var api_value = api_cookie[1]
+
+  download_json(
+    /* url= */ 'https://login.7plus.com.au/accounts.getJWT',
+    /* headers= */ null,
+    /* data= */ {
+      'APIKey':      api_key,
+      'sdk':         'js_latest',
+      'login_token': api_value,
+      'authMode':    'cookie',
+      'pageURL':     'https://7plus.com.au/?overlay=sign-in',
+      'sdkBuild':    '17058',
+      'format':      'json'
+    },
+    /* withCredentials= */ true,
+    function(error, login_resp) {
+      if (error) return
+
+      if (login_resp && (typeof login_resp === 'object') && login_resp.id_token) {
+        state.id_token = login_resp.id_token
+        callback()
+      }
+      else {
+        debug('Failed to obtain JWT. API response: ' + JSON.stringify(login_resp, null, 2))
+      }
+    }
+  )
+}
+
+// ----------------------------------------------------------------------------- API: download live tv guide
+
+var download_livetv_guide = function(channelId, callback) {
+  download_json(
+    /* url= */ 'https://component.swm.digital/v2/component/live-tv?component-id=489700&platform-id=Web&market-id=4&platform-version=1.0.102084&api-version=4.9.0.0&signedUp=False',
+    /* headers= */ null,
+    /* data= */ null,
+    /* withCredentials= */ false,
+    function(error, livetv_data) {
+      if (error) return
+
+      debug('livetv_data: ' + typeof livetv_data)
+      debug('channels: ' + typeof livetv_data.mediaItems + ' (' + (Array.isArray(livetv_data.mediaItems) ? 'array' : 'not array') + ')')
+      if (!livetv_data || (typeof livetv_data !== 'object') || !Array.isArray(livetv_data.mediaItems) || !livetv_data.mediaItems.length) return
+
+      state.series = {
+        title:   'Live TV Channels',
+        summary: null
+      }
+
+      state.livetv_channels = normalize_livetv_channels_list(
+        livetv_data.mediaItems
+      )
+
+      debug('live tv channels: ' + typeof state.livetv_channels + ' (' + ((state.livetv_channels === null) ? 'null' : state.livetv_channels.length) + ')')
+      if (!state.livetv_channels || !state.livetv_channels.length) return
+
+      if (channelId) {
+        for (var i=0; i < state.livetv_channels.length; i++) {
+          if (state.livetv_channels[i].channelId === channelId) {
+            state.current_livetv_channel_index = i
+            break
+          }
+        }
+      }
+
+      callback()
+    }
+  )
+}
+
+var normalize_livetv_channels_list = function(all_channels) {
+  if (!Array.isArray(all_channels) || !all_channels.length) return null
+
+  return all_channels.map(function(channel) {
+    if (!channel || (typeof channel !== 'object') || !channel.channelName || !channel.schedules || (typeof channel.schedules !== 'object') || !Array.isArray(channel.schedules.sourceList) || !channel.schedules.sourceList.length) return null
+
+    var i, source, player_url
+
+    for (i=0; i < channel.schedules.sourceList.length; i++) {
+      source = channel.schedules.sourceList[i]
+
+      if (source && (typeof source === 'object') && (source.type === 'player') && source.url) {
+        player_url = source.url
+        break
+      }
+    }
+
+    if (!player_url) return null
+
+    var epg = (Array.isArray(channel.schedules.items) && channel.schedules.items.length)
+      ? channel.schedules.items.map(function(broadcast) {
+          var duration_date_range, duration
+
+          duration_date_range = (broadcast.startTime && broadcast.endTime)
+            ? convertDateRangeToReadableString(broadcast.startTime, broadcast.endTime)
+            : null
+
+          duration = broadcast.duration
+            ? convertSecondsToReadableString(
+                broadcast.duration * 60
+              )
+            : null
+
+          return {
+            series_title:        broadcast.title,
+            episode_title:       broadcast.subTitle,
+            episode_summary:     broadcast.synopsis,
+            duration_date_range: duration_date_range,
+            duration:            duration
+          }
+        })
+      : null
+
+    return {
+      channelId:  channel.channelName,
+      name:       channel.name || channel.channelName,
+      player_url: player_url,
+      epg:        epg
+    }
+  })
+  .filter(function(channel) {
+    return !!channel
+  })
+}
+
+// ----------------------------------------------------------------------------- API: download video sources for live tv channel
+
+var download_livetv_channel_video_sources = function(player_url, callback) {
+  // request #1 = (player_url) => video_url
+  // request #2 = (video_url, id_token) => video_sources
+
+  download_json(
+    /* url= */ player_url,
+    /* headers= */ null,
+    /* data= */ null,
+    /* withCredentials= */ false,
+    function(error, player_data) {
+      if (error) return
+
+      if (!player_data || (typeof player_data !== 'object') || !player_data.videoPlayer || (typeof player_data.videoPlayer !== 'object') || !player_data.videoPlayer.videoUrl) return
+
+      var livetv_channel_url = player_data.videoPlayer.videoUrl
+        .replace('{ppId}',       '')
+        .replace('{deviceId}',   '00000000-0000-0000-0000-000000000000')
+        .replace('{postcode}',   '2000')
+        .replace('{advertid}',   'null')
+        .replace('{deliveryId}', 'csai')
+
+      download_json(
+        /* url= */ livetv_channel_url,
+        /* headers= */ {
+          'authorization': 'Bearer ' + state.id_token
+        },
+        /* data= */ null,
+        /* withCredentials= */ true,
+        function(error, livetv_channel_data) {
+          if (error) return
+
+          if (!livetv_channel_data || (typeof livetv_channel_data !== 'object')) return
+
+          normalize_api_media_data(livetv_channel_data.media, callback)
+        }
+      )
+    }
+  )
 }
 
 // ----------------------------------------------------------------------------- DOM: static skeleton
@@ -777,35 +1053,35 @@ var reinitialize_dom = function() {
       '  margin: 0;',
       '}',
 
-      'body > div > ul > li > blockquote + div {',
+      'body > div > ul > li > div {',
       '  margin: 0.75em 0;',
       '}',
 
       // --------------------------------------------------- drm
 
-      'body > div > ul > li > blockquote + div > table {',
+      'body > div > ul > li > div > table {',
       '  width: 100%;',
       '  border-collapse: collapse;',
       '}',
 
-      'body > div > ul > li > blockquote + div > table tr > td:first-child + td {',
+      'body > div > ul > li > div > table tr > td:first-child + td {',
       '  width: 100%;',
       '}',
 
-      'body > div > ul > li > blockquote + div > table tr > td {',
+      'body > div > ul > li > div > table tr > td {',
       '  border-top: 1px solid #999;',
       '  padding: 0.5em 0;',
       '}',
 
-      'body > div > ul > li > blockquote + div > table tr:first-child > td {',
+      'body > div > ul > li > div > table tr:first-child > td {',
       '  border-top-style: none;',
       '}',
 
-      'body > div > ul > li > blockquote + div > table button {',
+      'body > div > ul > li > div > table button {',
       '  white-space: nowrap;',
       '}',
 
-      'body > div > ul > li > blockquote + div > table tr > td:last-child > div.icons-container {',
+      'body > div > ul > li > div > table tr > td:last-child > div.icons-container {',
       '}',
 
       // --------------------------------------------------- links to tools on Webcast Reloaded website
@@ -866,11 +1142,53 @@ var reinitialize_dom = function() {
       '}',
       'body > div > ul > li div.icons-container > a.airplay + a.video-link {',
       '  right: 17px; /* (60 - 25)/2 to center when there is no proxy icon */',
-      '}'
+      '}',
+
+      // --------------------------------------------------- live tv channel
+
+      'body > div > ul > li > blockquote + div + div > table.livetv-channel tr {',
+      '  vertical-align: top;',
+      '}',
+
+      'body > div > ul > li > blockquote + div + div > table.livetv-channel tr > td {',
+      '  padding: 0;',
+      '}',
+
+      'body > div > ul > li > blockquote + div + div > table.livetv-channel tr > td:first-child {',
+      '  white-space: nowrap;',
+      '  padding-right: 1em;',
+      '}',
+
+      'body > div > ul > li > blockquote + div + div > table.livetv-channel tr > td > h3 {',
+      '  padding: 0;',
+      '  margin: 0;',
+      '}',
+
+      'body > div > ul > li > blockquote + div + div > table.livetv-channel table {',
+      '  width: 100%;',
+      '}',
+
+      'body > div > ul > li > blockquote + div + div > table.livetv-channel table table tr > td {',
+      '  border-style: none;',
+      '  padding: 0.25em 0;',
+      '}',
+
+      'body > div > ul > li > blockquote + div + div > table.livetv-channel div.livetv-epg-toggle-container {',
+      '  transition: height  0.5s linear;',
+      '  overflow-y: hidden !important;',
+      '  height: auto !important;',
+      '}',
+
+      'body > div > ul > li > blockquote + div + div > table.livetv-channel div.livetv-epg-toggle-container.toggle-hide {',
+      '  height: 0px !important;',
+      '}',
+
+      ''
     ]
   })
 
   var div, ul, li
+  var i
 
   div = make_element('div')
   ul  = make_element('ul')
@@ -890,19 +1208,38 @@ var reinitialize_dom = function() {
     )
   }
 
-  for (var i=0; i < state.episodes.length; i++) {
+  for (i=0; i < state.episodes.length; i++) {
     li = make_episode_listitem_element(
       state.episodes[i]
     )
 
-    if (li)
+    if (li) {
       ul.appendChild(li)
+
+      if (i === state.current_episode_index) {
+        li.querySelector(':scope button[' + constants.button_attributes.reference_id + ']').click()
+      }
+    }
+  }
+
+  for (i=0; i < state.livetv_channels.length; i++) {
+    li = make_livetv_channel_listitem_element(
+      state.livetv_channels[i]
+    )
+
+    if (li) {
+      ul.appendChild(li)
+
+      if (i === state.current_livetv_channel_index) {
+        li.querySelector(':scope button[' + constants.button_attributes.player_url + ']').click()
+      }
+    }
   }
 
   unsafeWindow.document.body.appendChild(div)
 }
 
-// -----------------------------------------------------------------------------
+// ----------------------------------------------------------------------------- DOM: <li> for episode in show series
 
 var make_episode_listitem_element = function(episode) {
   // const {reference_id, title, summary, duration, expires} = episode
@@ -963,76 +1300,80 @@ var onclick_download_video_button = function(event) {
 }
 
 var add_video_sources_to_episode_listitem_element = function(div_dynamic, reference_id) {
-  download_video_sources(reference_id, function(video_sources) {
-    // video_sources is array of video_data: {video_url, video_type, caption_url, referer_url, drm: {scheme, server, headers}}
-
-    var tr, video_data, video_summary, td_button, td_icons, div_icons, a_icons, a_icon
-    var i
-
-    tr = []
-    for (i=0; i < video_sources.length; i++) {
-      video_data = video_sources[i]
-
-      video_summary  = '<ul>'
-      video_summary += '  <li>' + strings.episode_labels.video.format + ' ' + video_data.video_type + '</li>'
-      video_summary += '  <li>' + strings.episode_labels.video.drm    + ' ' + (video_data.drm.scheme || 'none') + '</li>'
-      video_summary += '</ul>'
-
-      append_tr(tr, ['', video_summary, '']) // col 1: button. col 3: icons.
-    }
-    empty_element(div_dynamic, '<table>' + tr.join("\n") + '</table>')
-
-    tr = div_dynamic.querySelectorAll(':scope > table tr')
-
-    for (i=0; i < tr.length; i++) {
-      video_data = video_sources[i]
-
-      td_button = tr[i].querySelector(':scope > td:first-child')
-      td_icons  = tr[i].querySelector(':scope > td:last-child')
-
-      add_start_video_button(/* block_element= */ td_button, video_data)
-
-      if (video_data.drm.scheme) {
-        div_icons = make_webcast_reloaded_div(video_data)
-
-        a_icons = {
-          real:    {},  // order: chromecast, airplay, [proxy], video-link
-          ordered: []
-        }
-
-        a_icons.real.airplay    = div_icons.querySelector('a.airplay')
-        a_icons.real.direct_hls = div_icons.querySelector('a.video-link')
-
-        a_icon = a_icons.real.direct_hls.cloneNode(/* deep= */ true)
-        a_icon.className = 'chromecast'
-        a_icons.ordered.push(a_icon)
-
-        a_icon = a_icons.real.direct_hls.cloneNode(/* deep= */ true)
-        a_icon.className = 'airplay'
-        a_icon.setAttribute('href',  video_data.drm.server)
-        a_icon.setAttribute('title', 'direct link to ' + video_data.drm.scheme + ' drm server')
-        a_icons.ordered.push(a_icon)
-
-        a_icon = a_icons.real.airplay.cloneNode(/* deep= */ true)
-        a_icon.className = 'video-link'
-        a_icons.ordered.push(a_icon)
-
-        empty_element(div_icons)
-
-        for (var j=0; j < a_icons.ordered.length; j++) {
-          a_icon = a_icons.ordered[j]
-
-          div_icons.appendChild(a_icon)
-        }
-        a_icons = null
-
-        td_icons.appendChild(div_icons)
-      }
-      else {
-        insert_webcast_reloaded_div(/* block_element= */ td_icons, video_data)
-      }
-    }
+  download_episode_video_sources(reference_id, function(video_sources) {
+    add_video_sources_to_listitem_element(div_dynamic, video_sources)
   })
+}
+
+var add_video_sources_to_listitem_element = function(div_dynamic, video_sources) {
+  // video_sources is array of video_data: {video_url, video_type, caption_url, referer_url, drm: {scheme, server, headers}}
+
+  var tr, video_data, video_summary, td_button, td_icons, div_icons, a_icons, a_icon
+  var i
+
+  tr = []
+  for (i=0; i < video_sources.length; i++) {
+    video_data = video_sources[i]
+
+    video_summary  = '<ul>'
+    video_summary += '  <li>' + strings.episode_labels.video.format + ' ' + video_data.video_type + '</li>'
+    video_summary += '  <li>' + strings.episode_labels.video.drm    + ' ' + (video_data.drm.scheme || 'none') + '</li>'
+    video_summary += '</ul>'
+
+    append_tr(tr, ['', video_summary, '']) // col 1: button. col 3: icons.
+  }
+  empty_element(div_dynamic, '<table>' + tr.join("\n") + '</table>')
+
+  tr = div_dynamic.querySelectorAll(':scope > table tr')
+
+  for (i=0; i < tr.length; i++) {
+    video_data = video_sources[i]
+
+    td_button = tr[i].querySelector(':scope > td:first-child')
+    td_icons  = tr[i].querySelector(':scope > td:last-child')
+
+    add_start_video_button(/* block_element= */ td_button, video_data)
+
+    if (video_data.drm.scheme) {
+      div_icons = make_webcast_reloaded_div(video_data)
+
+      a_icons = {
+        real:    {},  // order: chromecast, airplay, [proxy], video-link
+        ordered: []
+      }
+
+      a_icons.real.airplay    = div_icons.querySelector('a.airplay')
+      a_icons.real.direct_hls = div_icons.querySelector('a.video-link')
+
+      a_icon = a_icons.real.direct_hls.cloneNode(/* deep= */ true)
+      a_icon.className = 'chromecast'
+      a_icons.ordered.push(a_icon)
+
+      a_icon = a_icons.real.direct_hls.cloneNode(/* deep= */ true)
+      a_icon.className = 'airplay'
+      a_icon.setAttribute('href',  video_data.drm.server)
+      a_icon.setAttribute('title', 'direct link to ' + video_data.drm.scheme + ' drm server')
+      a_icons.ordered.push(a_icon)
+
+      a_icon = a_icons.real.airplay.cloneNode(/* deep= */ true)
+      a_icon.className = 'video-link'
+      a_icons.ordered.push(a_icon)
+
+      empty_element(div_icons)
+
+      for (var j=0; j < a_icons.ordered.length; j++) {
+        a_icon = a_icons.ordered[j]
+
+        div_icons.appendChild(a_icon)
+      }
+      a_icons = null
+
+      td_icons.appendChild(div_icons)
+    }
+    else {
+      insert_webcast_reloaded_div(/* block_element= */ td_icons, video_data)
+    }
+  }
 }
 
 var add_start_video_button = function(block_element, video_data) {
@@ -1097,14 +1438,199 @@ var make_webcast_reloaded_div = function(video_data) {
   return div
 }
 
+// ----------------------------------------------------------------------------- DOM: <li> for live tv channel
+
+var make_livetv_channel_listitem_element = function(channel) {
+  // const {name, player_url, epg} = channel
+
+  var tr, epg_html, html, li, div_dynamic, livetv_epg_toggle_button
+
+  tr = []
+  if (Array.isArray(channel.epg) && channel.epg.length) {
+    for (var i=0; i < channel.epg.length; i++) {
+      append_tr(
+        tr,
+        add_epg_to_livetv_channel_listitem_element(channel.epg[i])
+      )
+    }
+  }
+
+  epg_html = []
+  if (tr.length) {
+    epg_html = [
+      '<div>',
+        '<table class="livetv-channel">',
+          '<tr>',
+            '<td></td>',
+            '<td>',
+              '<h3>EPG:</h3>',
+              '<button class="livetv-epg-toggle-button">' + strings.livetv_epg_toggle_button.show + '</button>',
+              '<div class="livetv-epg-toggle-container toggle-hide">',
+                '<table class="livetv-epg">',
+                  '<tr><td></td></tr>',
+                  tr.join("\n"),
+                '</table>',
+              '</div>',
+            '</td>',
+          '</tr>',
+        '</table>',
+      '</div>'
+    ]
+  }
+
+  html = [
+    '<blockquote>' + channel.name + '</blockquote>',
+    '<div></div>',
+    epg_html.join("\n")
+  ]
+
+  li = make_element('li', html.join("\n"))
+
+  epg_html = null
+  html = null
+
+  div_dynamic = li.querySelector(':scope > blockquote + div')
+  div_dynamic.appendChild(
+    make_download_livetv_channel_button(channel.player_url)
+  )
+
+  livetv_epg_toggle_button = li.querySelector(':scope button.livetv-epg-toggle-button')
+  if (livetv_epg_toggle_button) {
+    livetv_epg_toggle_button.addEventListener("click", onclick_livetv_epg_toggle_button)
+  }
+
+  return li
+}
+
+var add_epg_to_livetv_channel_listitem_element = function(epg) {
+  // const {series_title, episode_title, episode_summary, duration_date_range, duration} = epg
+
+  var tr = []
+  if (epg.duration_date_range)
+    append_tr(tr, [strings.livetv_channel_labels.epg.duration_date_range, epg.duration_date_range])
+  if (epg.duration)
+    append_tr(tr, [strings.livetv_channel_labels.epg.duration, epg.duration])
+  if (epg.series_title)
+    append_tr(tr, [strings.livetv_channel_labels.epg.series_title, epg.series_title])
+  if (epg.episode_title)
+    append_tr(tr, [strings.livetv_channel_labels.epg.episode_title, epg.episode_title])
+  if (epg.episode_summary)
+    append_tr(tr, [strings.livetv_channel_labels.epg.episode_summary, epg.episode_summary])
+
+  return '<table>' + tr.join("\n") + '</table>'
+}
+
+var onclick_livetv_epg_toggle_button = function(event) {
+  cancel_event(event)
+
+  var className = 'toggle-hide'
+  var button, div_dynamic
+
+  button = event.target
+  if (!button) return
+
+  div_dynamic = button.nextElementSibling
+  if (!div_dynamic || !div_dynamic.classList.contains('livetv-epg-toggle-container')) return
+
+  if (div_dynamic.classList.contains(className)) {
+    // toggle: hide => show
+    div_dynamic.classList.remove(className)
+    button.textContent = strings.livetv_epg_toggle_button.hide
+  }
+  else {
+    // toggle: show => hide
+    div_dynamic.classList.add(className)
+    button.textContent = strings.livetv_epg_toggle_button.show
+  }
+}
+
+var make_download_livetv_channel_button = function(player_url) {
+  var button = make_element('button')
+
+  button.setAttribute(constants.button_attributes.player_url, player_url)
+  button.textContent = strings.button_download_video
+  button.addEventListener("click", onclick_download_livetv_channel_button)
+
+  return button
+}
+
+var onclick_download_livetv_channel_button = function(event) {
+  cancel_event(event)
+
+  var button, div_dynamic, player_url
+
+  button = event.target
+  if (!button) return
+
+  div_dynamic = button.parentElement
+  if (!div_dynamic) return
+
+  player_url = button.getAttribute(constants.button_attributes.player_url)
+  if (!player_url) return
+
+  add_video_sources_to_livetv_channel_listitem_element(div_dynamic, player_url)
+}
+
+var add_video_sources_to_livetv_channel_listitem_element = function(div_dynamic, player_url) {
+  download_livetv_channel_video_sources(player_url, function(video_sources) {
+    add_video_sources_to_listitem_element(div_dynamic, video_sources)
+  })
+}
+
+// ----------------------------------------------------------------------------- bootstrap: live tv
+
+var page_init_livetv = function() {
+  var path = unsafeWindow.location.pathname
+  var qs   = unsafeWindow.location.search
+  var channelId
+
+  if (path.indexOf('/live-tv') === 0) {
+    channelId = find_needle({
+      haystack: qs,
+      needle:   'channel-id=',
+      tail:     '&',
+      strict:   false
+    })
+    debug('channelId: ' + channelId)
+
+    download_id_token(function() {
+      download_livetv_guide(channelId, reinitialize_dom)
+    })
+
+    return true
+  }
+  return false
+}
+
+// ----------------------------------------------------------------------------- bootstrap: shows
+
+var page_init_shows = function() {
+  var path = unsafeWindow.location.pathname
+  var qs   = unsafeWindow.location.search
+  var seriesId, episodeId
+
+  if ((path.length < 2) || (path[0] !== '/')) return false
+  seriesId = path.split('/')[1]
+  debug('seriesId: ' + seriesId)
+
+  episodeId = find_needle({
+    haystack: qs,
+    needle:   'episode-id=',
+    tail:     '&',
+    strict:   false
+  })
+  debug('episodeId: ' + episodeId)
+
+  download_series_media_items(seriesId, episodeId, reinitialize_dom)
+  return true
+}
+
 // ----------------------------------------------------------------------------- bootstrap
 
 var page_init = function() {
   debug('initializing..', true)
 
-  download_series_media_items(
-    reinitialize_dom
-  )
+  page_init_livetv() || page_init_shows()
 }
 
 if (user_options.common.init_delay_ms)

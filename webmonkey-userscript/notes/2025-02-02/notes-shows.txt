@@ -19,6 +19,14 @@ https://players.brightcove.net/5303576322001/5J5AQeoHF_default/index.min.js
 
 --------------------------------------------------------------------------------
 
+test video (S01E01):
+====================
+
+https://7plus.com.au/gilmore-girls?episode-id=GILG01-001
+https://7plus.com.au/gilmore-girls?episode-id=GILG01-001&autoplay=true
+
+--------------------------------------------------------------------------------
+
 https://component-cdn.swm.digital/content/gilmore-girls?platform-id=web&market-id=-1&platform-version=1.0.100878&api-version=4.9
 {
   "title": "Gilmore Girls",
@@ -2182,7 +2190,7 @@ curl --insecure \
 test #1:
 ========
 
-curl -s -o "./data/1_curl_response.txt" --insecure -H "Referer: https://7plus.com.au/gilmore-girls" -H "BCOV-POLICY: BCpkADawqM33sxTxTSkUGuTlYrSr1IWKvoedldJ6w01PbfYMPMDR2OSumoyEdKusPv2UC6g_bidqbcAkLzVwSOgD1Yea5O3V0Wu35n2lWGq1FmNDHB4dhwcTqJ7Z3GNoI-mfkmi6xMpLPBAN" "https://edge.api.brightcove.com/playback/v1/accounts/5303576322001/videos/ref:GILG01-001"
+curl -s -o "./data/1_brightcove_api_response.txt" --insecure -H "Referer: https://7plus.com.au/gilmore-girls" -H "BCOV-POLICY: BCpkADawqM33sxTxTSkUGuTlYrSr1IWKvoedldJ6w01PbfYMPMDR2OSumoyEdKusPv2UC6g_bidqbcAkLzVwSOgD1Yea5O3V0Wu35n2lWGq1FmNDHB4dhwcTqJ7Z3GNoI-mfkmi6xMpLPBAN" "https://edge.api.brightcove.com/playback/v1/accounts/5303576322001/videos/ref:GILG01-001"
 
 200 OK
 
