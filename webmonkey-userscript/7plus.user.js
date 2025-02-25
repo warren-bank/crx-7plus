@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         7plus
 // @description  Improve site usability. Watch videos in external player.
-// @version      2.0.0
+// @version      2.0.1
 // @match        *://*.7plus.com.au/*
 // @icon         https://7plus.com.au/favicon.ico
 // @run-at       document-end
@@ -1634,6 +1634,6 @@ var page_init = function() {
 }
 
 if (user_options.common.init_delay_ms)
-  setTimeout(page_init, user_options.common.init_delay_ms)
+  unsafeWindow.setTimeout(page_init, user_options.common.init_delay_ms)
 else
   page_init()
