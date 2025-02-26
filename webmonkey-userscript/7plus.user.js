@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         7plus
 // @description  Improve site usability. Watch videos in external player.
-// @version      2.0.1
+// @version      2.0.2
 // @match        *://*.7plus.com.au/*
 // @icon         https://7plus.com.au/favicon.ico
 // @run-at       document-end
@@ -452,7 +452,7 @@ var process_video_data = function(data) {
     // running in Android-WebMonkey: open Intent chooser
 
     if (!data.video_type)
-      data.video_type = determine_video_type(data.video_url)
+      data.video_type = ''
 
     var args = [
       /* action = */ 'android.intent.action.VIEW',
