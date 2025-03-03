@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         7plus
 // @description  Improve site usability. Watch videos in external player.
-// @version      2.0.2
+// @version      2.0.3
 // @match        *://*.7plus.com.au/*
 // @icon         https://7plus.com.au/favicon.ico
 // @run-at       document-end
@@ -199,6 +199,7 @@ var download_text = function(url, headers, data, withCredentials, callback) {
     if (xhr.readyState === 4) {
       if ((xhr.status >= 200) && (xhr.status < 300)) {
         callback(null, xhr.responseText)
+        return
       }
     }
     callback(new Error())
